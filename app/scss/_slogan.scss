@@ -2,7 +2,7 @@
   background-color: $veryLightGray;
 
   .container {
-    @include breakpoint_up(large) {
+    @include breakpoint_up(medium) {
       display: flex;
       align-items: center;
       padding: 2.25rem 1.5rem;
@@ -17,12 +17,12 @@
     background-position: center center;
     min-height: 23rem;
 
-    @include breakpoint_up(medium) {
+    @include breakpoint_up(small) {
       min-height: 27rem;
       background-position: center 62%;
     }
 
-    @include breakpoint_up(large) {
+    @include breakpoint_up(medium) {
       flex: 1;
       order: 2;
       border-radius: 50px;
@@ -34,7 +34,7 @@
   &_text {
     text-align: center;
 
-    @include breakpoint_up(large) {
+    @include breakpoint_up(medium) {
       flex: 1;
       order: 1;
       max-width: 29rem;

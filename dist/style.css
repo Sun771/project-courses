@@ -144,7 +144,7 @@ button:hover,
 
 @media (min-width: 64em) {
   .hide_for_desktop {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -321,30 +321,68 @@ p {
 }
 
 .courses {
+  position: relative;
   text-align: center;
 }
-.courses p {
-  padding-bottom: 1rem;
+.courses .container p {
+  margin-bottom: 1.5rem;
+}
+.courses img#decoration_waves_left,
+.courses img#decoration_waves_right {
+  display: none;
+}
+@media (min-width: 40em) {
+  .courses img#decoration_waves_left {
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: auto;
+    top: 15%;
+    left: 0%;
+  }
+  .courses img#decoration_waves_right {
+    display: block;
+    position: absolute;
+    width: 4.5rem;
+    height: auto;
+    top: 45%;
+    right: 0%;
+  }
+}
+@media (min-width: 64em) {
+  .courses img#decoration_waves_left,
+  .courses img#decoration_waves_right {
+    display: none;
+  }
 }
 
 .course_grid {
-  margin-top: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 64em) {
   .course_grid {
     display: flex;
+    flex-direction: row;
+    align-items: felx-start;
     justify-content: space-between;
   }
 }
 .course_item {
+  position: relative;
+  max-width: 19rem;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 0.625rem;
   transition: all 200ms ease-in-out;
   cursor: pointer;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 64em) {
   .course_item {
+    max-width: 19.5rem;
     flex: 1;
-    max-width: 19rem;
+    margin: 0;
   }
 }
 .course_item:hover {
@@ -352,8 +390,8 @@ p {
   transform: scale(101%);
 }
 .course_image img {
-  width: 19rem;
-  height: 9.9375rem;
+  width: 100%;
+  height: auto;
   margin-bottom: 0.625rem;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px 2px rgb(215, 215, 215);
@@ -361,10 +399,5 @@ p {
 .course_title h2 {
   font-size: 1.3rem;
   text-align: center;
-}
-.course_description {
-  width: 17.5rem;
-  margin-inline: auto;
-  text-align: justify;
-  padding-bottom: 0.625rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

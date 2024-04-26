@@ -120,7 +120,7 @@ button,
 
 .hide_for_desktop {
   // hide for desktop viewport widths
-  @include breakpoint_up(large) {
-    display: none !important;
+  @include breakpoint_up(medium) {
+    display: none;
   }
 }

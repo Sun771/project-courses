@@ -1,29 +1,73 @@
 .courses {
+  position: relative;
   text-align: center;
+  .container {
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
 
-  p {
-    padding-bottom: 1rem;
+  // decorations
+  img#decoration_waves_left,
+  img#decoration_waves_right {
+    display: none;
+  }
+
+  @include breakpoint_up(small) {
+    img#decoration_waves_left {
+      display: block;
+      position: absolute;
+      width: 3rem;
+      height: auto;
+      top: 15%;
+      left: 0%;
+    }
+
+    img#decoration_waves_right {
+      display: block;
+      position: absolute;
+      width: 4.5rem;
+      height: auto;
+      top: 45%;
+      right: 0%;
+    }
+  }
+
+  @include breakpoint_up(medium) {
+    img#decoration_waves_left,
+    img#decoration_waves_right {
+      display: none;
+    }
   }
 }
 
 .course {
   &_grid {
-    margin-top: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @include breakpoint_up(large) {
+    @include breakpoint_up(medium) {
       display: flex;
+      flex-direction: row;
+      align-items: felx-start;
       justify-content: space-between;
     }
   }
 
   &_item {
+    position: relative;
+    max-width: 19rem;
+    background-color: $white;
     border-radius: 0.625rem;
     transition: all 200ms ease-in-out;
     cursor: pointer;
+    margin-bottom: 1.5rem;
 
-    @include breakpoint_up(large) {
+    @include breakpoint_up(medium) {
+      max-width: 19.5rem;
       flex: 1;
-      max-width: 19rem;
+      margin: 0;
     }
 
     &:hover {
@@ -34,8 +78,8 @@
 
   &_image {
     img {
-      width: 19rem;
-      height: 9.9375rem;
+      width: 100%;
+      height: auto;
       margin-bottom: 0.625rem;
       border-radius: 0.625rem;
       box-shadow: 0 0 10px 2px rgb(215, 215, 215);
@@ -46,13 +90,7 @@
     h2 {
       font-size: 1.3rem;
       text-align: center;
+      margin-bottom: 1rem;
     }
-  }
-
-  &_description {
-    width: 17.5rem;
-    margin-inline: auto;
-    text-align: justify;
-    padding-bottom: 0.625rem;
   }
 }

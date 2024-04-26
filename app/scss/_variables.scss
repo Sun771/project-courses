@@ -11,3 +11,10 @@ $white: hsl(0, 0%, 100%);
 $font-small: 0.875rem; // 14px
 $font-premedium: 1rem;
 $font-medium: 1.125rem; // 18px
+
+// Background for after pseudo element
+$gradient_dissapearing_text: linear-gradient(
+  to bottom,
+  transparent,
+  rgba(255, 255, 255, 1)
+);
