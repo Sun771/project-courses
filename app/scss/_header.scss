@@ -51,7 +51,7 @@
     }
 
     h1 {
-      margin-left: 10px;
+      margin: 0 0 0 10px;
       white-space: nowrap;
       font-size: $font-medium;
       font-weight: bold;
@@ -59,6 +59,8 @@
       background: linear-gradient(to right, #db1662, #df5900, #b51ab5);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+
+      transition: opacity 300ms ease-in-out;
 
       &:hover {
         opacity: 0.8;
@@ -132,17 +134,6 @@
           opacity: 1;
         }
       }
-    }
-  }
-
-  // cta — Call To Action
-  &_cta {
-    font-size: $font-small;
-    color: $white;
-    transition: opacity 300ms ease-in-out;
-
-    &:hover {
-      opacity: 0.8;
     }
   }
 }

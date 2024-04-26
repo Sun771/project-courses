@@ -1,0 +1,58 @@
+.courses {
+  text-align: center;
+
+  p {
+    padding-bottom: 1rem;
+  }
+}
+
+.course {
+  &_grid {
+    margin-top: 0.625rem;
+
+    @include breakpoint_up(large) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &_item {
+    border-radius: 0.625rem;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+
+    @include breakpoint_up(large) {
+      flex: 1;
+      max-width: 19rem;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px 5px rgb(215, 215, 215);
+      transform: scale(101%);
+    }
+  }
+
+  &_image {
+    img {
+      width: 19rem;
+      height: 9.9375rem;
+      margin-bottom: 0.625rem;
+      border-radius: 0.625rem;
+      box-shadow: 0 0 10px 2px rgb(215, 215, 215);
+    }
+  }
+
+  &_title {
+    h2 {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+
+  &_description {
+    width: 17.5rem;
+    margin-inline: auto;
+    text-align: justify;
+    padding-bottom: 0.625rem;
+  }
+}

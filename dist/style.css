@@ -62,6 +62,12 @@ body.without-scroll {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
 a,
 a:visited,
 a:hover {
@@ -69,7 +75,33 @@ a:hover {
 }
 
 .container {
+  max-width: 68.75rem;
+  margin-inline: auto;
+}
+.container_pall {
+  padding-top: 2.25rem;
   padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
+}
+.container_py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.container_px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container_pt {
+  padding-top: 2.25rem;
+}
+.container_pr {
+  padding-right: 1.5rem;
+}
+.container_pb {
+  padding-bottom: 2.25rem;
+}
+.container_pl {
   padding-left: 1.5rem;
 }
 
@@ -88,13 +120,20 @@ a:hover {
 
 button,
 .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, red, orange);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: hsl(0, 0%, 100%);
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: opacity 300ms ease-in-out;
+}
+button:hover,
+.button:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 63.99875em) {
@@ -148,13 +187,14 @@ button,
   opacity: 0.8;
 }
 .header_logo h1 {
-  margin-left: 10px;
+  margin: 0 0 0 10px;
   white-space: nowrap;
   font-size: 1.125rem;
   font-weight: bold;
   background: linear-gradient(to right, #db1662, #df5900, #b51ab5);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  transition: opacity 300ms ease-in-out;
 }
 .header_logo h1:hover {
   opacity: 0.8;
@@ -214,34 +254,117 @@ button,
 .header_links a:hover::before {
   opacity: 1;
 }
-.header_cta {
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 100%);
-  transition: opacity 300ms ease-in-out;
-}
-.header_cta:hover {
-  opacity: 0.8;
-}
 
 p {
   margin: 0;
 }
 
+.slogan {
+  background-color: hsl(0, 0%, 97%);
+}
+@media (min-width: 64em) {
+  .slogan .container {
+    display: flex;
+    align-items: center;
+    padding: 2.25rem 1.5rem;
+  }
+}
 .slogan_image {
   position: relative;
-  background-image: url("/images/red_lines_background.svg");
+  background-image: url("/images/welcoming_image_mobile.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 25rem;
+  min-height: 23rem;
 }
-.slogan_image::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/technologies.png");
-  background-size: 95%;
-  background-repeat: no-repeat;
-  background-position: center center;
+@media (min-width: 40em) {
+  .slogan_image {
+    min-height: 27rem;
+    background-position: center 62%;
+  }
+}
+@media (min-width: 64em) {
+  .slogan_image {
+    flex: 1;
+    order: 2;
+    border-radius: 50px;
+    min-height: 40rem;
+    max-width: 31.25rem;
+  }
+}
+.slogan_text {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .slogan_text {
+    flex: 1;
+    order: 1;
+    max-width: 29rem;
+    padding: 0;
+    margin-inline: auto;
+    text-align: left;
+  }
+  .slogan_text #slogan_text_id {
+    font-size: 2.31rem;
+  }
+}
+.slogan_text h1 {
+  font-weight: 300;
+  font-size: 1.875rem;
+  line-height: 1.15;
+  color: hsl(233, 26%, 24%);
+  margin-bottom: 1.5rem;
+}
+.slogan_text p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
+.courses {
+  text-align: center;
+}
+.courses p {
+  padding-bottom: 1rem;
+}
+
+.course_grid {
+  margin-top: 0.625rem;
+}
+@media (min-width: 64em) {
+  .course_grid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.course_item {
+  border-radius: 0.625rem;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+@media (min-width: 64em) {
+  .course_item {
+    flex: 1;
+    max-width: 19rem;
+  }
+}
+.course_item:hover {
+  box-shadow: 0 0 10px 5px rgb(215, 215, 215);
+  transform: scale(101%);
+}
+.course_image img {
+  width: 19rem;
+  height: 9.9375rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px 2px rgb(215, 215, 215);
+}
+.course_title h2 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.course_description {
+  width: 17.5rem;
+  margin-inline: auto;
+  text-align: justify;
+  padding-bottom: 0.625rem;
 }/*# sourceMappingURL=style.css.map */
