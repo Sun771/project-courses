@@ -54,7 +54,9 @@
       <div class="container">
         <div class="slogan_image"></div>
         <div class="slogan_text container_pall">
-          <h1 id="slogan_text_id">Підвищуй професіоналізм вивчаючи курси</h1>
+          <h1 id="slogan_text_id">
+            Підвищуй свій професіоналізм за допомогою курсів програмування!
+          </h1>
           <p>
             Велика кількість курсів програмування надає можливість покращити
             свої знання, збільшити майстерність, досягнути нових вершин.
@@ -67,12 +69,12 @@
     <section class="courses">
       <!-- decorations -->
       <img
-        id="decoration_waves_left"
-        src="/images/decorations/waves_left_side.svg"
+        id="courses_waves_left_side"
+        src="/images/decorations/courses_waves_left_side.svg"
         alt="Декорація хвилі зліва на головній сторінці в секції курси" />
       <img
-        id="decoration_waves_right"
-        src="/images/decorations/waves_right_side.svg"
+        id="courses_waves_right_side"
+        src="/images/decorations/courses_waves_right_side.svg"
         alt="Декорація хвилі справа на головній сторінці в секції курси" />
       <!-- /decorations -->
       <div class="container container_pall">
@@ -82,37 +84,164 @@
           сертифікат про проходження при успішному закінчені курсу.
         </p>
         <div class="course_grid">
-          <div class="course_item">
-            <div class="course_image">
-              <img src="/images/courses/html.jpg" alt="Фотографія курсу HTML" />
+          <a class="link_course_item" href="/courses.html">
+            <div class="course_item">
+              <div class="img_title_wrapper">
+                <div class="course_image">
+                  <img
+                    src="/images/courses/html.jpg"
+                    alt="Фотографія курсу HTML" />
+                </div>
+                <div class="course_title">
+                  <h2>Мова розмітки HTML</h2>
+                </div>
+              </div>
+              <div class="course_description">
+                <p>
+                  Мова розмітки HTML для створення веб-сторінок. Наш курс
+                  дозволить вам освоїти магію веб-розробки, від простих сторінок
+                  до складних додатків, використовуючи потужні можливості HTML.
+                </p>
+              </div>
             </div>
-            <div class="course_title">
-              <h2>Мова розмітки HTML</h2>
+          </a>
+          <a class="link_course_item" href="/courses.html">
+            <div class="course_item">
+              <div class="img_title_wrapper">
+                <div class="course_image">
+                  <img
+                    src="/images/courses/css.jpg"
+                    alt="Фотографія курсу HTML" />
+                </div>
+                <div class="course_title">
+                  <h2>Мова стилювання CSS</h2>
+                </div>
+              </div>
+              <div class="course_description">
+                <p>
+                  Розкрийте свою креативність з нашим курсом CSS. Вивчайте
+                  сучасні методи стилізації веб-сторінок і створюйте привабливі
+                  інтерфейси з ефектами анімації.
+                </p>
+              </div>
             </div>
-            <div class="course_description"></div>
-          </div>
-          <div class="course_item">
-            <div class="course_image">
-              <img src="/images/courses/css.jpg" alt="Фотографія курсу HTML" />
+          </a>
+          <a class="link_course_item" href="/courses.html">
+            <div class="course_item">
+              <div class="img_title_wrapper">
+                <div class="course_image">
+                  <img
+                    src="/images/courses/js.jpg"
+                    alt="Фотографія курсу HTML" />
+                </div>
+                <div class="course_title">
+                  <h2>Мова JavaScript</h2>
+                </div>
+              </div>
+              <div class="course_description">
+                <p>
+                  Навчіться веб-розробці вивчивши JavaScript. Потужна мова
+                  програмування для створення інтерактивних веб-додатків та
+                  додавання динаміки до ваших веб-сайтів.
+                </p>
+              </div>
             </div>
-            <div class="course_title">
-              <h2>Мова стилювання CSS</h2>
-            </div>
-            <div class="course_description"></div>
-          </div>
-          <div class="course_item">
-            <div class="course_image">
-              <img src="/images/courses/js.jpg" alt="Фотографія курсу HTML" />
-            </div>
-            <div class="course_title">
-              <h2>Мова JavaScript</h2>
-            </div>
-            <div class="course_description"></div>
-          </div>
+          </a>
         </div>
-        <a href="/courses.html" class="button-different-gradient button">
-          Переглянути всі курси
-        </a>
+        <a href="/courses.html" class="button">Переглянути всі курси</a>
+      </div>
+    </section>
+
+    <section class="articles">
+      <!-- decorations -->
+      <!-- FIXME id repeats two times -->
+      <img
+        id="articles_waves_left_side"
+        src="/images/decorations/articles_waves_left_side.svg"
+        alt="Декорація хвилі зліва на головній сторінці в секції курси" />
+      <img
+        id="articles_waves_right_side"
+        src="/images/decorations/articles_waves_right_side.svg"
+        alt="Декорація хвилі справа на головній сторінці в секції курси" />
+      <!-- /decorations -->
+      <div class="container container_pall">
+        <h2>Наші останні статті</h2>
+        <p>
+          Актуальні статті на тематики програмування, сучасних технологій та
+          веб-розробки.
+        </p>
+        <div class="article_grid">
+          <a class="link_article_item" href="/articles.html">
+            <div class="article_item">
+              <div class="img_title_wrapper">
+                <div class="article_image">
+                  <img
+                    src="/images/articles/js_how_to_use_in_html_page.jpg"
+                    alt="Фотографія статті про JS" />
+                </div>
+                <div class="article_title">
+                  <h2>Як використовувати JavaScript в HTML сторінці</h2>
+                </div>
+              </div>
+              <div class="article_description">
+                <p>
+                  Дізнайтесь, як JavaScript може динамічно трансформувати ваші
+                  HTML сторінки, надаючи їм інтерактивності та функціональності.
+                  Ключові методи і прийоми використання JavaScript для
+                  досягнення найкращих результатів у вашому веб-проекті.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="link_article_item" href="/articles.html">
+            <div class="article_item">
+              <div class="img_title_wrapper">
+                <div class="article_image">
+                  <img
+                    src="/images/articles/js_importance.png"
+                    alt="Фотографія статті про JS" />
+                </div>
+                <div class="article_title">
+                  <h2>Важливість JavaScript у веб-розробці</h2>
+                </div>
+              </div>
+              <div class="article_description">
+                <p>
+                  JavaScript є необхідним інструментом у сучасній веб-розробці,
+                  дозволяючи створювати динамічні інтерфейси та забезпечуючи
+                  взаємодію користувача з веб-сайтом без перезавантаження
+                  сторінки. Дізнайтесь, як JavaScript допомагає покращити
+                  швидкість, функціональність та ефективність вашого
+                  веб-проекту.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="link_article_item" href="/articles.html">
+            <div class="article_item">
+              <div class="img_title_wrapper">
+                <div class="article_image">
+                  <img
+                    src="/images/articles/sass.jpg"
+                    alt="Фотографія статті про SASS" />
+                </div>
+                <div class="article_title">
+                  <h2>Стилізація веб-сторінок за допомогою SASS та SCSS</h2>
+                </div>
+              </div>
+              <div class="article_description">
+                <p>
+                  SASS та SCSS дозволяють створювати зручніші, модульні стилі, з
+                  можливістю повторного використання, для веб-сторінок, зокрема
+                  за допомогою змінних, міксінів та вкладених правил. Вивчіть,
+                  як SASS/SCSS може полегшити процес стилізації ваших
+                  веб-проектів.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <a href="/articles.html" class="button">Переглянути всі статті</a>
       </div>
     </section>
 

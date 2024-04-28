@@ -5,21 +5,22 @@
     @include breakpoint_up(medium) {
       display: flex;
       align-items: center;
-      padding: 2.25rem 1.5rem;
+      padding: 0 1.5rem;
     }
   }
 
   &_image {
     position: relative;
-    background-image: url("/images/welcoming_image_mobile.jpeg");
+    background-image: url("/images/test1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 23rem;
+    min-height: 15rem;
+    background-position: center top;
 
     @include breakpoint_up(small) {
-      min-height: 27rem;
-      background-position: center 62%;
+      min-height: 20rem;
+      background-position: center top;
     }
 
     @include breakpoint_up(medium) {
@@ -33,6 +34,9 @@
 
   &_text {
     text-align: center;
+    #slogan_text_id {
+      font-size: 1.8rem;
+    }
 
     @include breakpoint_up(medium) {
       flex: 1;
@@ -41,22 +45,10 @@
       padding: 0;
       margin-inline: auto;
       text-align: left;
-      #slogan_text_id {
-        font-size: 2.31rem;
-      }
-    }
-
-    h1 {
-      font-weight: 300;
-      font-size: 1.875rem;
-      line-height: 1.15;
-      color: $darkBlue;
-      margin-bottom: 1.5rem;
     }
 
     p {
-      line-height: 1.5;
-      margin-bottom: 2.25rem;
+      margin: 0 0 2.25rem;
     }
   }
 }
