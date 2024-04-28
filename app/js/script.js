@@ -28,3 +28,20 @@ btnMenu.addEventListener("click", function () {
     });
   }
 });
+
+const gradientTextDissapearing = document.getElementsByClassName(
+  "identifier_gradient_text_dissapearing"
+);
+
+function showText(element) {
+  if (element.previousElementSibling.clientHeight === 100) {
+    element.previousElementSibling.previousElementSibling.style.height = "100%";
+    element.previousElementSibling.classList.remove("styles_text_dissapearing");
+    element.src = "/images/arrow_up.png";
+  } else {
+    element.previousElementSibling.previousElementSibling.style.height =
+      "100px";
+    element.previousElementSibling.classList.add("styles_text_dissapearing");
+    element.src = "/images/arrow_down.png";
+  }
+}

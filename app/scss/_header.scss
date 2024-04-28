@@ -35,23 +35,19 @@
   }
 
   &_logo {
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: 3.125rem;
     display: flex;
     align-items: center;
 
     img {
-      width: 50px;
+      width: 3.125rem;
       height: auto;
       transition: opacity 300ms ease-in-out;
-
-      &:hover {
-        opacity: 0.8;
-      }
     }
 
     h1 {
-      margin-left: 10px;
+      margin: 0 0 0 0.625rem;
       white-space: nowrap;
       font-size: $font-medium;
       font-weight: bold;
@@ -60,9 +56,12 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
 
-      &:hover {
-        opacity: 0.8;
-      }
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover img,
+    h1 {
+      opacity: 0.8;
     }
   }
 
@@ -134,19 +133,4 @@
       }
     }
   }
-
-  // cta — Call To Action
-  &_cta {
-    font-size: $font-small;
-    color: $white;
-    transition: opacity 300ms ease-in-out;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
-
-p {
-  margin: 0;
 }

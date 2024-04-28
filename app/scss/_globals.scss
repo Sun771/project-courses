@@ -23,6 +23,29 @@ body {
   }
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  margin-top: 0;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.875rem;
+  color: $darkBlue;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: hsl(233, 16%, 30%);
+}
+
+p {
+  line-height: 1.5;
+}
+
 a,
 a:visited,
 a:hover {
@@ -31,8 +54,61 @@ a:hover {
 
 // Spacing
 .container {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  max-width: 68.75rem;
+  margin-inline: auto;
+
+  &_pall {
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+    padding-left: 1.5rem;
+
+    @include breakpoint-up(medium) {
+      padding-top: 6rem;
+      padding-right: 1.5rem;
+      padding-bottom: 6rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &_py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint-up(medium) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &_px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  &_pt {
+    padding-top: 3rem;
+
+    @include breakpoint-up(medium) {
+      padding-top: 6rem;
+    }
+  }
+
+  &_pr {
+    padding-right: 1.5rem;
+  }
+
+  &_pb {
+    padding-bottom: 3rem;
+
+    @include breakpoint-up(medium) {
+      padding-bottom: 6rem;
+    }
+  }
+
+  &_pl {
+    padding-left: 1.5rem;
+  }
 }
 
 // Flexbox
@@ -55,13 +131,20 @@ a:hover {
 // Buttons
 button,
 .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, red, orange);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: $white;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: $font-premedium;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 // Visibility
@@ -74,7 +157,7 @@ button,
 
 .hide_for_desktop {
   // hide for desktop viewport widths
-  @include breakpoint_up(large) {
-    display: none !important;
+  @include breakpoint_up(medium) {
+    display: none;
   }
 }
