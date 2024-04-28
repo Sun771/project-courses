@@ -161,3 +161,18 @@ button,
     display: none;
   }
 }
+
+.author {
+  p {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.5rem 0;
+    margin-bottom: 0;
+
+    @include breakpoint-up(medium) {
+      padding: 0.7rem 0 0.5rem;
+      width: 85%;
+      margin-inline: auto;
+      text-align: left;
+    }
+  }
+}

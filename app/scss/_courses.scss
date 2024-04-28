@@ -2,20 +2,14 @@
   color: hsl(236, 6%, 45%);
 }
 
+p {
+  margin: 0 0 2rem;
+}
+
 .courses {
   background-color: $lightGrayishBlue;
   position: relative;
   text-align: center;
-
-  .container {
-    p {
-      margin: 0 0 1.5rem;
-
-      @include breakpoint_up(small) {
-        margin-bottom: 2rem;
-      }
-    }
-  }
 
   // decorations
   img#courses_waves_left_side,
@@ -76,9 +70,24 @@
     margin-bottom: 2rem;
 
     .img_title_wrapper {
+      .course_image {
+        line-height: 0;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 0.625rem;
+          box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
+        }
+      }
+
       .course_title {
         h2 {
-          margin-bottom: 0.5rem;
+          font-size: 1.3rem;
+          font-weight: 400;
+          text-align: center;
+          padding: 0.5rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -134,6 +143,7 @@
           h2 {
             text-align: left;
             margin: 0;
+            padding: 0;
           }
         }
       }
@@ -154,25 +164,6 @@
     &:hover {
       box-shadow: 0 0 0.625rem 0.3125rem rgb(215, 215, 215);
       transform: scale(101%);
-    }
-  }
-
-  &_image {
-    img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 0.5rem;
-      border-radius: 0.625rem;
-      box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
-    }
-  }
-
-  &_title {
-    h2 {
-      font-size: 1.3rem;
-      font-weight: 400;
-      text-align: center;
-      margin-bottom: 1rem;
     }
   }
 }
