@@ -220,7 +220,7 @@ button:hover,
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(hsl(0, 49%, 36%), transparent);
+  background-image: linear-gradient(hsl(0, 54%, 33%), transparent);
 }
 .header nav {
   position: relative;
@@ -283,7 +283,7 @@ button:hover,
 }
 .header_links a {
   position: relative;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: hsl(4, 6%, 45%);
   transition: color 200ms ease-in-out;
 }
@@ -330,7 +330,7 @@ button:hover,
 }
 .slogan_image {
   position: relative;
-  background-image: url("/images/test1.jpg");
+  background-image: url("/images/slogan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
