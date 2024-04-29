@@ -42,7 +42,7 @@
     }
 
     &:hover img {
-      opacity: 0.8;
+      opacity: 0.75;
     }
   }
 
@@ -51,15 +51,24 @@
 
     @include breakpoint_up(medium) {
       grid-area: socials;
-      align-self: start;
+      margin-top: 0.3rem;
       margin-bottom: 0;
     }
 
     a {
       display: inline-block;
+      height: 1.25rem;
 
       &:not(:last-child) {
         margin-right: 1rem;
+      }
+
+      svg path {
+        transition: fill 200ms ease-in-out;
+      }
+
+      &:hover svg path {
+        fill: $lightOrange;
       }
     }
   }
@@ -71,7 +80,7 @@
 
     @include breakpoint_up(medium) {
       & > a:not(:last-child) {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.25rem;
       }
     }
 
@@ -92,14 +101,21 @@
 
     a {
       line-height: 2.25rem;
+      transition: color 200ms ease-in-out;
 
       @include breakpoint_up(medium) {
         line-height: 1;
+      }
+
+      &:hover {
+        color: $lightOrange;
       }
     }
   }
 
   &_copyright {
+    color: $lessLightGrayish;
+
     @include breakpoint_up(medium) {
       grid-area: copyright;
       text-align: left;
