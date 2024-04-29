@@ -1,0 +1,59 @@
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+  padding: 2.5rem;
+  text-align: center;
+
+  a {
+    color: $white;
+  }
+
+  &_logo {
+    display: inline-block;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-bottom: 1.875rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover img {
+      opacity: 0.8;
+    }
+  }
+
+  &_social {
+    margin-bottom: 1.875rem;
+
+    a {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.column_first {
+    }
+
+    &.column_second {
+      margin-bottom: 1.875rem;
+    }
+
+    a {
+      line-height: 2.25;
+    }
+  }
+
+  &_copyright {
+  }
+}

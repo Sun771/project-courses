@@ -659,4 +659,48 @@ p {
   font-weight: 400;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  color: hsl(0, 0%, 100%);
+  padding: 2.5rem;
+  text-align: center;
+}
+.footer a {
+  color: hsl(0, 0%, 100%);
+}
+.footer_logo {
+  display: inline-block;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+.footer_logo img {
+  width: 100%;
+  height: auto;
+  transition: opacity 300ms ease-in-out;
+}
+.footer_logo:hover img {
+  opacity: 0.8;
+}
+.footer_social {
+  margin-bottom: 1.875rem;
+}
+.footer_social a {
+  display: inline-block;
+}
+.footer_social a:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_links.column_second {
+  margin-bottom: 1.875rem;
+}
+.footer_links a {
+  line-height: 2.25;
 }/*# sourceMappingURL=style.css.map */
