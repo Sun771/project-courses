@@ -3,12 +3,13 @@
   color: $white;
   padding: 2.5rem;
   text-align: center;
+  font-size: 0.875rem;
 
   .container {
     @include breakpoint_up(medium) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: 1fr 0.7fr;
       grid-template-areas:
         "logo socials links_first links_second"
         "copyright socials links_first links_second";
@@ -29,11 +30,9 @@
 
     @include breakpoint_up(medium) {
       grid-area: logo;
-      position: absolute;
+      justify-self: left;
+      align-self: start;
       margin: 0;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
     }
 
     img {
@@ -52,7 +51,7 @@
 
     @include breakpoint_up(medium) {
       grid-area: socials;
-      margin-top: 0.95rem;
+      align-self: start;
       margin-bottom: 0;
     }
 
@@ -70,6 +69,12 @@
     flex-direction: column;
     align-items: center;
 
+    @include breakpoint_up(medium) {
+      & > a:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
     &.column_first {
       @include breakpoint_up(medium) {
         grid-area: links_first;
@@ -81,24 +86,25 @@
 
       @include breakpoint_up(medium) {
         grid-area: links_second;
-        margin-inline: auto;
         margin: 0;
       }
     }
 
     a {
-      line-height: 2.25;
+      line-height: 2.25rem;
+
+      @include breakpoint_up(medium) {
+        line-height: 1;
+      }
     }
   }
 
   &_copyright {
     @include breakpoint_up(medium) {
       grid-area: copyright;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
       text-align: left;
+      justify-self: left;
+      align-self: end;
     }
   }
 }

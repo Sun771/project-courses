@@ -666,12 +666,13 @@ p {
   color: hsl(0, 0%, 100%);
   padding: 2.5rem;
   text-align: center;
+  font-size: 0.875rem;
 }
 @media (min-width: 64em) {
   .footer .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.7fr;
     grid-template-areas: "logo socials links_first links_second" "copyright socials links_first links_second";
     justify-items: right;
     position: relative;
@@ -689,11 +690,9 @@ p {
 @media (min-width: 64em) {
   .footer_logo {
     grid-area: logo;
-    position: absolute;
+    justify-self: left;
+    align-self: start;
     margin: 0;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 .footer_logo img {
@@ -710,7 +709,7 @@ p {
 @media (min-width: 64em) {
   .footer_social {
     grid-area: socials;
-    margin-top: 0.95rem;
+    align-self: start;
     margin-bottom: 0;
   }
 }
@@ -726,6 +725,11 @@ p {
   align-items: center;
 }
 @media (min-width: 64em) {
+  .footer_links > a:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 64em) {
   .footer_links.column_first {
     grid-area: links_first;
   }
@@ -736,20 +740,22 @@ p {
 @media (min-width: 64em) {
   .footer_links.column_second {
     grid-area: links_second;
-    margin-inline: auto;
     margin: 0;
   }
 }
 .footer_links a {
-  line-height: 2.25;
+  line-height: 2.25rem;
+}
+@media (min-width: 64em) {
+  .footer_links a {
+    line-height: 1;
+  }
 }
 @media (min-width: 64em) {
   .footer_copyright {
     grid-area: copyright;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: left;
+    justify-self: left;
+    align-self: end;
   }
 }/*# sourceMappingURL=style.css.map */
