@@ -7,7 +7,7 @@
   .container {
     @include breakpoint_up(medium) {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1.2fr 2fr 1fr 1fr;
       grid-template-rows: 1fr 0.7fr;
       grid-template-areas:
         "logo socials links_first links_second"
@@ -29,6 +29,8 @@
 
     @include breakpoint_up(medium) {
       grid-area: logo;
+      width: 3.75rem;
+      height: 3.75rem;
       justify-self: left;
       align-self: start;
       margin: 0;
@@ -92,6 +94,16 @@
       grid-area: socials;
       margin-top: 0.3rem;
       margin-bottom: 0;
+      justify-self: center;
+
+      a {
+        width: 1.6875rem;
+        height: 1.6875rem;
+
+        svg {
+          transform: scale(135%);
+        }
+      }
     }
   }
 
@@ -101,6 +113,8 @@
     align-items: center;
 
     @include breakpoint_up(medium) {
+      font-size: $font-medium;
+
       & > a:not(:last-child) {
         margin-bottom: 1.25rem;
       }
@@ -136,6 +150,7 @@
   }
 
   &_copyright {
+    font-size: $font-premedium;
     color: $lessLightGrayish;
 
     @include breakpoint_up(medium) {
