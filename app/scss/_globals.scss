@@ -25,6 +25,10 @@ body {
   @include breakpoint_up(small) {
     font-size: $font-medium;
   }
+
+  @include breakpoint_up(medium) {
+    font-size: $font-prelarge;
+  }
 }
 
 h1,
@@ -42,6 +46,10 @@ h1 {
 
   @include breakpoint-up(small) {
     font-size: $font-h-premedium;
+  }
+
+  @include breakpoint_up(medium) {
+    font-size: $font-h-large;
   }
 }
 
@@ -75,6 +83,10 @@ button,
 
   @include breakpoint_up(small) {
     font-size: $font-medium;
+  }
+
+  @include breakpoint_up(medium) {
+    font-size: $font-prelarge;
   }
 }
 
