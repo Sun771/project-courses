@@ -46,20 +46,6 @@ p {
 }
 
 .article {
-  &_grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include breakpoint_up(medium) {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-    }
-  }
-
   &_item {
     position: relative;
     max-width: 19rem;
@@ -117,6 +103,14 @@ p {
           p {
             padding: 0 0.5rem 0.75rem;
           }
+
+          @include breakpoint_up(medium) {
+            order: 1;
+
+            p {
+              padding: 0;
+            }
+          }
         }
 
         .article_title {
@@ -124,6 +118,14 @@ p {
 
           h3 {
             padding: 0.75rem 0.5rem 0.5rem;
+          }
+
+          @include breakpoint_up(medium) {
+            order: 2;
+
+            h3 {
+              padding: 0 0.5rem 0.75rem;
+            }
           }
         }
       }
@@ -154,21 +156,22 @@ p {
         }
 
         .article_title {
-          width: 85%;
+          width: 90%;
           margin-inline: auto;
           margin-bottom: 1rem;
 
           h3 {
             text-align: left;
             margin: 0;
+            padding: 0;
           }
         }
       }
 
       .article_description {
-        width: 85%;
+        width: 90%;
         margin-inline: auto;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.75rem;
 
         p {
           max-width: 100%;

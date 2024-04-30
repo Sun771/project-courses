@@ -60,6 +60,10 @@ h2 {
   @include breakpoint_up(small) {
     font-size: $font-h-xsmall;
   }
+
+  @include breakpoint_up(medium) {
+    font-size: $font-h-prelarge;
+  }
 }
 
 h3 {
@@ -107,6 +111,15 @@ button,
 .container {
   max-width: 71.75rem;
   margin-inline: auto;
+
+  // font size
+  @include breakpoint_up(medium) {
+    .text_above {
+      p {
+        font-size: $font-large;
+      }
+    }
+  }
 
   &_pall {
     padding-top: 2rem;
@@ -225,10 +238,25 @@ button,
     }
 
     @include breakpoint-up(medium) {
-      padding: 0.7rem 0 0.5rem;
-      width: 85%;
+      width: 90%;
       margin-inline: auto;
+      margin-top: 12px;
+      margin-bottom: 8px;
       text-align: left;
     }
+  }
+}
+
+.cards_grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint_up(medium) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 3rem;
   }
 }

@@ -105,6 +105,11 @@ h2 {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 
 h3 {
   font-size: 1.2rem;
@@ -154,6 +159,11 @@ button:hover,
 .container {
   max-width: 71.75rem;
   margin-inline: auto;
+}
+@media (min-width: 64em) {
+  .container .text_above p {
+    font-size: 1.375rem;
+  }
 }
 .container_pall {
   padding-top: 2rem;
@@ -267,10 +277,26 @@ button:hover,
 }
 @media (min-width: 64em) {
   .author p {
-    padding: 0.7rem 0 0.5rem;
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
+    margin-top: 12px;
+    margin-bottom: 8px;
     text-align: left;
+  }
+}
+
+.cards_grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 64em) {
+  .cards_grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 3rem;
   }
 }
 
@@ -523,21 +549,10 @@ p {
     display: none;
   }
 }
+.courses .container_pall {
+  padding-top: 3rem;
+}
 
-.course_grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 64em) {
-  .course_grid {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-}
 .course_item {
   position: relative;
   max-width: 19rem;
@@ -584,12 +599,32 @@ p {
   .course_item .wrapper_img_author_title .author p {
     padding: 0 0.5rem 0.75rem;
   }
+}
+@media (min-width: 40em) and (min-width: 64em) {
+  .course_item .wrapper_img_author_title .author {
+    order: 1;
+  }
+  .course_item .wrapper_img_author_title .author p {
+    padding: 0;
+  }
+}
+@media (min-width: 40em) {
   .course_item .wrapper_img_author_title .course_title {
     order: 1;
   }
   .course_item .wrapper_img_author_title .course_title h3 {
     padding: 0.75rem 0.5rem 0.5rem;
   }
+}
+@media (min-width: 40em) and (min-width: 64em) {
+  .course_item .wrapper_img_author_title .course_title {
+    order: 2;
+  }
+  .course_item .wrapper_img_author_title .course_title h3 {
+    padding: 0 0.5rem 0.75rem;
+  }
+}
+@media (min-width: 40em) {
   .course_item .course_description p {
     max-width: 19rem;
     text-align: left;
@@ -611,7 +646,7 @@ p {
     height: 10.31rem;
   }
   .course_item .wrapper_img_author_title .course_title {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
     margin-bottom: 1rem;
   }
@@ -621,9 +656,9 @@ p {
     padding: 0;
   }
   .course_item .course_description {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
   }
   .course_item .course_description p {
     max-width: 100%;
@@ -678,20 +713,6 @@ p {
   }
 }
 
-.article_grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 64em) {
-  .article_grid {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-}
 .article_item {
   position: relative;
   max-width: 19rem;
@@ -741,12 +762,32 @@ p {
   .article_item .wrapper_img_author_title .author p {
     padding: 0 0.5rem 0.75rem;
   }
+}
+@media (min-width: 40em) and (min-width: 64em) {
+  .article_item .wrapper_img_author_title .author {
+    order: 1;
+  }
+  .article_item .wrapper_img_author_title .author p {
+    padding: 0;
+  }
+}
+@media (min-width: 40em) {
   .article_item .wrapper_img_author_title .article_title {
     order: 1;
   }
   .article_item .wrapper_img_author_title .article_title h3 {
     padding: 0.75rem 0.5rem 0.5rem;
   }
+}
+@media (min-width: 40em) and (min-width: 64em) {
+  .article_item .wrapper_img_author_title .article_title {
+    order: 2;
+  }
+  .article_item .wrapper_img_author_title .article_title h3 {
+    padding: 0 0.5rem 0.75rem;
+  }
+}
+@media (min-width: 40em) {
   .article_item .article_description p {
     max-width: 19rem;
     text-align: left;
@@ -768,18 +809,19 @@ p {
     height: 10.31rem;
   }
   .article_item .wrapper_img_author_title .article_title {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
     margin-bottom: 1rem;
   }
   .article_item .wrapper_img_author_title .article_title h3 {
     text-align: left;
     margin: 0;
+    padding: 0;
   }
   .article_item .article_description {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
   }
   .article_item .article_description p {
     max-width: 100%;
