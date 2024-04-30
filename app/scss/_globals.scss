@@ -42,7 +42,7 @@ h3 {
 }
 
 h1 {
-  font-size: $font-h-small;
+  font-size: $font-h-xsmall;
 
   @include breakpoint-up(small) {
     font-size: $font-h-premedium;
@@ -50,11 +50,24 @@ h1 {
 
   @include breakpoint_up(medium) {
     font-size: $font-h-large;
+    color: $lightBlue;
   }
 }
 
 h2 {
   font-size: $font-h-small;
+
+  @include breakpoint_up(small) {
+    font-size: $font-h-xsmall;
+  }
+}
+
+h3 {
+  font-size: $font-h-presmall;
+
+  @include breakpoint_up(small) {
+    font-size: $font-h-small;
+  }
 }
 
 a,
@@ -101,6 +114,13 @@ button,
     padding-bottom: 2rem;
     padding-left: 1.5rem;
 
+    @include breakpoint-up(small) {
+      padding-top: 4rem;
+      padding-right: 1.5rem;
+      padding-bottom: 4rem;
+      padding-left: 1.5rem;
+    }
+
     @include breakpoint-up(medium) {
       padding-top: 6rem;
       padding-right: 1.5rem;
@@ -112,6 +132,11 @@ button,
   &_py {
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    @include breakpoint-up(small) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
 
     @include breakpoint-up(medium) {
       padding-top: 6rem;
@@ -127,6 +152,10 @@ button,
   &_pt {
     padding-top: 2rem;
 
+    @include breakpoint-up(small) {
+      padding-top: 4rem;
+    }
+
     @include breakpoint-up(medium) {
       padding-top: 6rem;
     }
@@ -138,6 +167,10 @@ button,
 
   &_pb {
     padding-bottom: 2rem;
+
+    @include breakpoint-up(small) {
+      padding-bottom: 4rem;
+    }
 
     @include breakpoint-up(medium) {
       padding-bottom: 6rem;

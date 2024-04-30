@@ -83,7 +83,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 40em) {
   h1 {
@@ -93,11 +93,26 @@ h1 {
 @media (min-width: 64em) {
   h1 {
     font-size: 2.125rem;
+    color: hsl(233, 100%, 95%);
   }
 }
 
 h2 {
   font-size: 1.4rem;
+}
+@media (min-width: 40em) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+@media (min-width: 40em) {
+  h3 {
+    font-size: 1.4rem;
+  }
 }
 
 a,
@@ -146,6 +161,14 @@ button:hover,
   padding-bottom: 2rem;
   padding-left: 1.5rem;
 }
+@media (min-width: 40em) {
+  .container_pall {
+    padding-top: 4rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+  }
+}
 @media (min-width: 64em) {
   .container_pall {
     padding-top: 6rem;
@@ -157,6 +180,12 @@ button:hover,
 .container_py {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+@media (min-width: 40em) {
+  .container_py {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 @media (min-width: 64em) {
   .container_py {
@@ -171,6 +200,11 @@ button:hover,
 .container_pt {
   padding-top: 2rem;
 }
+@media (min-width: 40em) {
+  .container_pt {
+    padding-top: 4rem;
+  }
+}
 @media (min-width: 64em) {
   .container_pt {
     padding-top: 6rem;
@@ -181,6 +215,11 @@ button:hover,
 }
 .container_pb {
   padding-bottom: 2rem;
+}
+@media (min-width: 40em) {
+  .container_pb {
+    padding-bottom: 4rem;
+  }
 }
 @media (min-width: 64em) {
   .container_pb {
@@ -371,19 +410,17 @@ button:hover,
     height: 750px;
   }
 }
-@media (min-width: 64em) {
-  .slogan .container {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-  }
-}
-.slogan .container .container_pall {
+.slogan .container_pall {
   padding-top: 1.5rem;
 }
+@media (min-width: 40em) {
+  .slogan .container_pall {
+    padding-top: 2rem;
+  }
+}
 @media (min-width: 64em) {
-  .slogan .container .container_pall {
-    padding-top: 0;
+  .slogan .container_pall {
+    padding: 0;
   }
 }
 .slogan_image {
@@ -405,22 +442,24 @@ button:hover,
     background-image: none;
   }
 }
-.slogan_text {
+.slogan_text_btn {
   text-align: center;
 }
+.slogan_text_btn p {
+  margin: 0 0 1.5rem;
+}
 @media (min-width: 64em) {
-  .slogan_text {
+  .slogan_text_btn {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 37.5rem;
   }
-  .slogan_text p {
+  .slogan_text_btn p {
     width: 32.9375rem;
+    color: hsl(237, 31%, 86%);
   }
-}
-.slogan_text p {
-  margin: 0 0 1.5rem;
 }
 .slogan .background_card_blurred {
   display: none;
@@ -430,13 +469,16 @@ button:hover,
     display: block;
     position: relative;
     width: 41.25rem;
-    height: 23.375rem;
-    background-color: hsla(0, 0%, 83%, 0.1);
+    height: 23.75rem;
     padding: 2rem;
+    background-color: hsla(0, 0%, 36%, 0.1);
     border-radius: 30px;
     /* Add the blur effect */
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 }
 
@@ -469,7 +511,7 @@ p {
   .courses img#courses_waves_right_side {
     display: block;
     position: absolute;
-    width: 4.5rem;
+    width: 4rem;
     height: auto;
     top: 45%;
     right: 0%;
@@ -505,17 +547,16 @@ p {
   cursor: pointer;
   margin-bottom: 2rem;
 }
-.course_item .img_title_wrapper .course_image {
+.course_item .wrapper_img_author_title .course_image {
   line-height: 0;
 }
-.course_item .img_title_wrapper .course_image img {
+.course_item .wrapper_img_author_title .course_image img {
   width: 100%;
   height: auto;
   border-radius: 0.625rem;
   box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
 }
-.course_item .img_title_wrapper .course_title h2 {
-  font-size: 1.2rem;
+.course_item .wrapper_img_author_title .course_title h3 {
   font-weight: 400;
   text-align: center;
   padding: 0.5rem;
@@ -523,20 +564,34 @@ p {
 }
 .course_item .course_description p {
   margin: 0;
-  padding: 0 0.5rem 0.7rem;
+  padding: 0 0.5rem 0.75rem;
 }
 @media (min-width: 40em) {
   .course_item {
     display: flex;
     justify-content: space-between;
-    max-width: 31rem;
-    width: 31rem;
+    max-width: 37rem;
+    width: 37rem;
   }
-  .course_item .img_title_wrapper {
-    max-width: 15rem;
+  .course_item .wrapper_img_author_title {
+    display: flex;
+    flex-direction: column;
+    max-width: 17rem;
+  }
+  .course_item .wrapper_img_author_title .author {
+    order: 2;
+  }
+  .course_item .wrapper_img_author_title .author p {
+    padding: 0 0.5rem 0.75rem;
+  }
+  .course_item .wrapper_img_author_title .course_title {
+    order: 1;
+  }
+  .course_item .wrapper_img_author_title .course_title h3 {
+    padding: 0.75rem 0.5rem 0.5rem;
   }
   .course_item .course_description p {
-    max-width: 15rem;
+    max-width: 19rem;
     text-align: left;
     margin: 0;
     padding: 0.5rem;
@@ -549,18 +604,18 @@ p {
     flex: 1;
     margin: 0;
   }
-  .course_item .img_title_wrapper {
+  .course_item .wrapper_img_author_title {
     max-width: 100%;
   }
-  .course_item .img_title_wrapper .course_image img {
+  .course_item .wrapper_img_author_title .course_image img {
     height: 10.31rem;
   }
-  .course_item .img_title_wrapper .course_title {
+  .course_item .wrapper_img_author_title .course_title {
     width: 85%;
     margin-inline: auto;
     margin-bottom: 1rem;
   }
-  .course_item .img_title_wrapper .course_title h2 {
+  .course_item .wrapper_img_author_title .course_title h3 {
     text-align: left;
     margin: 0;
     padding: 0;
@@ -610,7 +665,7 @@ p {
   .articles img#articles_waves_right_side {
     display: block;
     position: absolute;
-    width: 4.5rem;
+    width: 4rem;
     height: auto;
     top: 45%;
     right: 0%;
@@ -646,40 +701,54 @@ p {
   cursor: pointer;
   margin-bottom: 2rem;
 }
-.article_item .img_title_wrapper .article_image {
+.article_item .wrapper_img_author_title .article_image {
   line-height: 0;
 }
-.article_item .img_title_wrapper .article_image img {
+.article_item .wrapper_img_author_title .article_image img {
   width: 100%;
   height: auto;
   border-radius: 0.625rem;
   box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
 }
-.article_item .img_title_wrapper .article_title h2 {
+.article_item .wrapper_img_author_title .article_title h2 {
   padding: 0.5rem;
   margin-bottom: 0;
 }
 @media (min-width: 64em) {
-  .article_item .img_title_wrapper .article_title h2 {
+  .article_item .wrapper_img_author_title .article_title h2 {
     padding: 0;
   }
 }
 .article_item .article_description p {
   margin: 0;
-  padding: 0 0.5rem 0.7rem;
+  padding: 0 0.5rem 0.75rem;
 }
 @media (min-width: 40em) {
   .article_item {
     display: flex;
     justify-content: space-between;
-    max-width: 31rem;
-    width: 31rem;
+    max-width: 37rem;
+    width: 37rem;
   }
-  .article_item .img_title_wrapper {
-    max-width: 15rem;
+  .article_item .wrapper_img_author_title {
+    display: flex;
+    flex-direction: column;
+    max-width: 17rem;
+  }
+  .article_item .wrapper_img_author_title .author {
+    order: 2;
+  }
+  .article_item .wrapper_img_author_title .author p {
+    padding: 0 0.5rem 0.75rem;
+  }
+  .article_item .wrapper_img_author_title .article_title {
+    order: 1;
+  }
+  .article_item .wrapper_img_author_title .article_title h3 {
+    padding: 0.75rem 0.5rem 0.5rem;
   }
   .article_item .article_description p {
-    max-width: 15rem;
+    max-width: 19rem;
     text-align: left;
     margin: 0;
     padding: 0.5rem;
@@ -692,18 +761,18 @@ p {
     flex: 1;
     margin: 0;
   }
-  .article_item .img_title_wrapper {
+  .article_item .wrapper_img_author_title {
     max-width: 100%;
   }
-  .article_item .img_title_wrapper .article_image img {
+  .article_item .wrapper_img_author_title .article_image img {
     height: 10.31rem;
   }
-  .article_item .img_title_wrapper .article_title {
+  .article_item .wrapper_img_author_title .article_title {
     width: 85%;
     margin-inline: auto;
     margin-bottom: 1rem;
   }
-  .article_item .img_title_wrapper .article_title h2 {
+  .article_item .wrapper_img_author_title .article_title h3 {
     text-align: left;
     margin: 0;
   }
@@ -722,8 +791,10 @@ p {
   box-shadow: 0 0 0.625rem 0.3125rem rgb(215, 215, 215);
   transform: scale(101%);
 }
-.article_title h2 {
+.article_title h3 {
   text-align: center;
+  margin-bottom: 0;
+  padding: 0.5rem;
 }
 
 .footer {
