@@ -42,9 +42,6 @@
 
   &_text {
     text-align: center;
-    #slogan_text_id {
-      font-size: 1.8rem;
-    }
 
     @include breakpoint_up(medium) {
       flex: 1;

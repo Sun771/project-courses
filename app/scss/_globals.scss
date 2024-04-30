@@ -13,10 +13,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Public Sans", sans-serif;
-  font-size: $font-medium;
+  font-size: $font-premedium;
   font-weight: 300;
-  color: $grayishBlue;
-  line-height: 1.3;
+  line-height: 1.5;
+  color: $colorRegularText;
 
   &.without-scroll {
     overflow: hidden;
@@ -26,24 +26,20 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 1.3;
   margin-top: 0;
-  line-height: 1.15;
   margin-bottom: 1.5rem;
 }
 
 h1 {
-  font-size: 1.875rem;
+  font-size: $font-h-small;
   color: $darkBlue;
 }
 
 h2 {
-  font-size: 1.7rem;
-  color: hsl(233, 16%, 30%);
-}
-
-p {
-  line-height: 1.5;
+  font-size: 1.4rem;
+  color: $color-h2;
 }
 
 a,
@@ -54,13 +50,13 @@ a:hover {
 
 // Spacing
 .container {
-  max-width: 68.75rem;
+  max-width: 71.75rem;
   margin-inline: auto;
 
   &_pall {
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-right: 1.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     padding-left: 1.5rem;
 
     @include breakpoint-up(medium) {
@@ -72,8 +68,8 @@ a:hover {
   }
 
   &_py {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     @include breakpoint-up(medium) {
       padding-top: 6rem;
@@ -87,7 +83,7 @@ a:hover {
   }
 
   &_pt {
-    padding-top: 3rem;
+    padding-top: 2rem;
 
     @include breakpoint-up(medium) {
       padding-top: 6rem;
@@ -99,7 +95,7 @@ a:hover {
   }
 
   &_pb {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 
     @include breakpoint-up(medium) {
       padding-bottom: 6rem;
@@ -139,7 +135,7 @@ button,
   cursor: pointer;
   color: $white;
   font-weight: 500;
-  font-size: $font-premedium;
+  font-size: $font-small;
   transition: opacity 200ms ease-in-out;
 
   &:hover {
@@ -164,8 +160,8 @@ button,
 
 .author {
   p {
-    font-size: 0.9rem;
-    padding: 0.7rem 0.5rem 0;
+    font-size: $font-small;
+    padding: 0.75rem 0.5rem 0;
     margin-bottom: 0;
 
     @include breakpoint-up(medium) {

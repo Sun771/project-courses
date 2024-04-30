@@ -1,5 +1,5 @@
 .link_course_item {
-  color: hsl(236, 6%, 45%);
+  color: $colorRegularText;
 }
 
 p {
@@ -83,7 +83,7 @@ p {
 
       .course_title {
         h2 {
-          font-size: 1.3rem;
+          font-size: $font-h-presmall;
           font-weight: 400;
           text-align: center;
           padding: 0.5rem;
@@ -94,7 +94,7 @@ p {
 
     .course_description {
       p {
-        font-size: 1rem;
+        // font-size: 1rem;
         margin: 0;
         padding: 0.5rem;
       }

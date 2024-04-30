@@ -2,17 +2,32 @@
 $darkBlue: hsl(233, 26%, 24%);
 $darkRed: hsl(0, 54%, 33%);
 $lightOrange: hsl(39, 100%, 68%);
-$grayishBlue: hsl(4, 6%, 45%);
+$grayishBlue: hsl(236, 6%, 45%);
 $lightGrayishBlue: hsl(220, 16%, 96%);
 $lightGrayish: hsl(0, 0%, 94%);
 $veryLightGray: hsl(0, 0%, 97%);
 $lessLightGrayish: hsl(0, 0%, 85%);
 $white: hsl(0, 0%, 100%);
+$color-h2: hsl(233, 16%, 30%);
+$colorRegularText: hsl(0, 0%, 41%);
 
-// Font sizes
+// Font sizes for text
+$font-presmall: 0.75rem; // 12px
 $font-small: 0.875rem; // 14px
 $font-premedium: 1rem; // 16px
 $font-medium: 1.125rem; // 18px
+$font-prelarge: 1.25rem; // 20px
+$font-large: 1.375rem; // 22px
+$font-xlarge: 1.5rem; // 24px
+
+// Font sizes for headings
+$font-h-presmall: 1.2rem;
+$font-h-small: 1.4rem;
+$font-h-premedium: 1.6rem;
+$font-h-medium: 1.8rem;
+$font-h-prelarge: 2rem; // 32px
+$font-h-large: 2.125rem; // 34px
+$font-h-xlarge: 2.3rem;
 
 // Background for after pseudo element
 $gradient_dissapearing_text: linear-gradient(
