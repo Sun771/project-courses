@@ -3,7 +3,6 @@
   color: $white;
   padding: 2.5rem;
   text-align: center;
-  font-size: 0.875rem;
 
   .container {
     @include breakpoint_up(medium) {
@@ -48,19 +47,21 @@
 
   &_social {
     margin-bottom: 1.875rem;
-
-    @include breakpoint_up(medium) {
-      grid-area: socials;
-      margin-top: 0.3rem;
-      margin-bottom: 0;
-    }
+    display: flex;
+    justify-content: center;
 
     a {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 1.25rem;
 
       &:not(:last-child) {
         margin-right: 1rem;
+      }
+
+      svg {
+        margin: auto;
       }
 
       svg path {
@@ -70,6 +71,27 @@
       &:hover svg path {
         fill: $lightOrange;
       }
+    }
+
+    @include breakpoint-up(small) {
+      a {
+        width: 1.5625rem;
+        height: 1.5625rem;
+
+        svg {
+          transform: scale(120%);
+        }
+
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    @include breakpoint_up(medium) {
+      grid-area: socials;
+      margin-top: 0.3rem;
+      margin-bottom: 0;
     }
   }
 

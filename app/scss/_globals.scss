@@ -21,6 +21,10 @@ body {
   &.without-scroll {
     overflow: hidden;
   }
+
+  @include breakpoint_up(small) {
+    font-size: $font-medium;
+  }
 }
 
 h1,
@@ -30,22 +34,48 @@ h3 {
   line-height: 1.3;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  color: $darkBlue;
 }
 
 h1 {
   font-size: $font-h-small;
-  color: $darkBlue;
+
+  @include breakpoint-up(small) {
+    font-size: $font-h-premedium;
+  }
 }
 
 h2 {
-  font-size: 1.4rem;
-  color: $color-h2;
+  font-size: $font-h-small;
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+// Buttons
+button,
+.button {
+  display: inline-block;
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to right, red, orange);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: $white;
+  font-weight: 500;
+  font-size: $font-premedium;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include breakpoint_up(small) {
+    font-size: $font-medium;
+  }
 }
 
 // Spacing
@@ -124,25 +154,6 @@ a:hover {
   }
 }
 
-// Buttons
-button,
-.button {
-  display: inline-block;
-  padding: 0.875rem 2.1875rem;
-  background: linear-gradient(to right, red, orange);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  color: $white;
-  font-weight: 500;
-  font-size: $font-small;
-  transition: opacity 200ms ease-in-out;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
 // Visibility
 .hide_for_mobile {
   // hide for tablet and mobile devices
@@ -163,6 +174,10 @@ button,
     font-size: $font-small;
     padding: 0.75rem 0.5rem 0;
     margin-bottom: 0;
+
+    @include breakpoint-up(small) {
+      font-size: $font-premedium;
+    }
 
     @include breakpoint-up(medium) {
       padding: 0.7rem 0 0.5rem;
