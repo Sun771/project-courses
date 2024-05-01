@@ -56,7 +56,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
-  color: hsl(0, 0%, 41%);
+  color: hsl(235, 6%, 40%);
 }
 body.without-scroll {
   overflow: hidden;
@@ -80,6 +80,13 @@ h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: hsl(233, 26%, 24%);
+}
+@media (min-width: 40em) {
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 2rem;
+  }
 }
 
 h1 {
@@ -159,6 +166,9 @@ button:hover,
 .container {
   max-width: 71.75rem;
   margin-inline: auto;
+}
+.container .text_above {
+  text-align: center;
 }
 @media (min-width: 64em) {
   .container .text_above p {
@@ -509,7 +519,7 @@ button:hover,
 }
 
 .link_course_item {
-  color: hsl(0, 0%, 41%);
+  color: hsl(235, 6%, 40%);
 }
 
 p {
@@ -672,7 +682,7 @@ p {
 }
 
 .link_article_item {
-  color: hsl(0, 0%, 41%);
+  color: hsl(235, 6%, 40%);
 }
 
 p {
@@ -839,6 +849,75 @@ p {
   padding: 0.5rem;
 }
 
+.about_us .container .about_us_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_us .container .about_us_content .about_us_photos {
+  width: 100%;
+  border-radius: 1.5625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 12px grey;
+}
+.about_us .container .about_us_content #about_us_photo_first {
+  max-width: 36.9375rem;
+  max-height: 16.25rem;
+  -o-object-position: 0 10%;
+     object-position: 0 10%;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 40em) {
+  .about_us .container .about_us_content #about_us_photo_first {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 64em) {
+  .about_us .container .about_us_content #about_us_photo_first {
+    max-width: 40rem;
+    max-height: 19rem;
+  }
+}
+@media (min-width: 1300px) {
+  .about_us .container .about_us_content #about_us_photo_first {
+    max-width: 50rem;
+    max-height: 25rem;
+  }
+}
+.about_us .container .about_us_content .main_text {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 40em) {
+  .about_us .container .about_us_content .main_text {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1196px) {
+  .about_us .container .about_us_content .main_text {
+    padding: 0;
+  }
+}
+.about_us .container .about_us_content #about_us_photo_second {
+  max-width: 24.5rem;
+  max-height: 16.25rem;
+  -o-object-position: 0 20%;
+     object-position: 0 20%;
+}
+@media (min-width: 64em) {
+  .about_us .container .about_us_content #about_us_photo_second {
+    max-width: 30rem;
+    max-height: 20rem;
+  }
+}
+@media (min-width: 1300px) {
+  .about_us .container .about_us_content #about_us_photo_second {
+    max-width: 40rem;
+    max-height: 25rem;
+  }
+}
+
 .footer {
   background-color: hsl(233, 26%, 24%);
   color: hsl(0, 0%, 100%);
@@ -880,7 +959,7 @@ p {
   transition: opacity 300ms ease-in-out;
 }
 .footer_logo:hover img {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .footer_social {
   margin-bottom: 1.875rem;

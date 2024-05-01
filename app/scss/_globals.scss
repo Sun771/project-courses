@@ -39,6 +39,10 @@ h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: $darkBlue;
+
+  @include breakpoint_up(small) {
+    margin-bottom: 2rem;
+  }
 }
 
 h1 {
@@ -111,6 +115,10 @@ button,
 .container {
   max-width: 71.75rem;
   margin-inline: auto;
+
+  .text_above {
+    text-align: center;
+  }
 
   // font size
   @include breakpoint_up(medium) {
