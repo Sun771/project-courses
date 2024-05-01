@@ -1,0 +1,147 @@
+.contacts {
+  background-color: hsl(0, 0%, 94%);
+
+  .container {
+    .contacts_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contacts_information_socials {
+        text-align: center;
+
+        div:last-child {
+        }
+
+        .phone_number {
+          margin-bottom: 0.5rem;
+        }
+
+        .email_address {
+          margin-bottom: 1rem;
+        }
+
+        .contacts_socials {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1.25rem;
+
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+
+            svg {
+              margin: auto;
+            }
+
+            svg path {
+              fill: hsl(233, 26%, 24%);
+              transition: fill 200ms ease-in-out;
+            }
+
+            &:hover svg path {
+              fill: $neutralBlue;
+            }
+          }
+          @include breakpoint-up(small) {
+            a {
+              width: 1.5625rem;
+              height: 1.5625rem;
+
+              svg {
+                transform: scale(120%);
+              }
+
+              &:not(:last-child) {
+                margin-right: 1.5rem;
+              }
+            }
+          }
+
+          @include breakpoint_up(medium) {
+            a {
+              width: 1.6875rem;
+              height: 1.6875rem;
+
+              svg {
+                transform: scale(135%);
+              }
+            }
+          }
+        }
+      }
+
+      .contact_us_form {
+        max-width: 31.25rem;
+        width: 100%;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .contact_us_section_container_inputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            outline: none;
+            transition: all 200ms ease-in-out;
+
+            input {
+              height: 2.5rem;
+              color: $colorRegularText;
+              font-size: inherit;
+              padding: 0 1rem;
+              background-color: hsl(0, 0%, 85%);
+              border: 0.125rem solid hsl(0, 0%, 85%);
+              border-radius: 0.625rem;
+              outline: none;
+              transition: inherit;
+
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+              }
+
+              &::placeholder {
+                opacity: 60%;
+              }
+
+              &:focus {
+                border: 0.125rem solid #a5a5a5;
+              }
+            }
+
+            textarea {
+              height: 13.25rem;
+              font-family: inherit;
+              font-size: inherit;
+              color: $colorRegularText;
+              resize: none;
+              padding: 1rem 1rem;
+              margin-bottom: 1.5rem;
+              background-color: hsl(0, 0%, 85%);
+              border: 0.125rem solid hsl(0, 0%, 85%);
+              border-radius: 0.625rem;
+              outline: none;
+              transition: inherit;
+
+              &::placeholder {
+                opacity: 60%;
+              }
+
+              &:focus {
+                border: 0.125rem solid #a5a5a5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

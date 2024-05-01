@@ -849,6 +849,9 @@ p {
   padding: 0.5rem;
 }
 
+.about_us {
+  background-color: hsl(220, 14%, 96%);
+}
 .about_us .container .about_us_content {
   display: flex;
   flex-direction: column;
@@ -916,6 +919,131 @@ p {
     max-width: 40rem;
     max-height: 25rem;
   }
+}
+
+.contacts {
+  background-color: hsl(0, 0%, 94%);
+}
+.contacts .container .contacts_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts .container .contacts_content .contacts_information_socials {
+  text-align: center;
+}
+.contacts .container .contacts_content .contacts_information_socials .phone_number {
+  margin-bottom: 0.5rem;
+}
+.contacts .container .contacts_content .contacts_information_socials .email_address {
+  margin-bottom: 1rem;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials a:not(:last-child) {
+  margin-right: 1rem;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials a svg {
+  margin: auto;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials a svg path {
+  fill: hsl(233, 26%, 24%);
+  transition: fill 200ms ease-in-out;
+}
+.contacts .container .contacts_content .contacts_information_socials .contacts_socials a:hover svg path {
+  fill: hsl(233, 81%, 32%);
+}
+@media (min-width: 40em) {
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials a {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials a svg {
+    transform: scale(120%);
+  }
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials a:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials a {
+    width: 1.6875rem;
+    height: 1.6875rem;
+  }
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials a svg {
+    transform: scale(135%);
+  }
+}
+.contacts .container .contacts_content .contact_us_form {
+  max-width: 31.25rem;
+  width: 100%;
+}
+.contacts .container .contacts_content .contact_us_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  transition: all 200ms ease-in-out;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input {
+  height: 2.5rem;
+  color: hsl(235, 6%, 40%);
+  font-size: inherit;
+  padding: 0 1rem;
+  background-color: hsl(0, 0%, 85%);
+  border: 0.125rem solid hsl(0, 0%, 85%);
+  border-radius: 0.625rem;
+  outline: none;
+  transition: inherit;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input::-moz-placeholder {
+  opacity: 60%;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input::placeholder {
+  opacity: 60%;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input:focus {
+  border: 0.125rem solid #a5a5a5;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea {
+  height: 13.25rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: hsl(235, 6%, 40%);
+  resize: none;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+  background-color: hsl(0, 0%, 85%);
+  border: 0.125rem solid hsl(0, 0%, 85%);
+  border-radius: 0.625rem;
+  outline: none;
+  transition: inherit;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea::-moz-placeholder {
+  opacity: 60%;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea::placeholder {
+  opacity: 60%;
+}
+.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea:focus {
+  border: 0.125rem solid #a5a5a5;
 }
 
 .footer {
