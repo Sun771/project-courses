@@ -922,9 +922,34 @@ p {
 }
 
 .contacts {
+  position: relative;
   background-color: hsl(0, 0%, 94%);
 }
+.contacts img#background_lines_left_side {
+  display: none;
+}
+@media (min-width: 64em) {
+  .contacts img#background_lines_left_side {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+.contacts img#background_lines_right_side {
+  display: none;
+}
+@media (min-width: 64em) {
+  .contacts img#background_lines_right_side {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
 .contacts .container .contacts_content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -942,6 +967,11 @@ p {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 40em) {
+  .contacts .container .contacts_content .contacts_information_socials .contacts_socials {
+    margin-bottom: 2rem;
+  }
 }
 .contacts .container .contacts_content .contacts_information_socials .contacts_socials a {
   display: flex;
@@ -983,52 +1013,64 @@ p {
     transform: scale(135%);
   }
 }
-.contacts .container .contacts_content .contact_us_form {
+.contacts .container .contacts_content .contact_us_form_container {
   max-width: 31.25rem;
   width: 100%;
 }
-.contacts .container .contacts_content .contact_us_form form {
+.contacts .container .contacts_content .contact_us_form_container form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs {
   width: 100%;
   display: flex;
   flex-direction: column;
   outline: none;
   transition: all 200ms ease-in-out;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input {
-  height: 2.5rem;
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input {
   color: hsl(235, 6%, 40%);
   font-size: inherit;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   background-color: hsl(0, 0%, 85%);
   border: 0.125rem solid hsl(0, 0%, 85%);
   border-radius: 0.625rem;
   outline: none;
   transition: inherit;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input:not(:last-child) {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input:not(:last-child) {
   margin-bottom: 1rem;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input::-moz-placeholder {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input::-moz-placeholder {
   opacity: 60%;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input::placeholder {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input::placeholder {
   opacity: 60%;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs input:focus {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input:hover {
   border: 0.125rem solid #a5a5a5;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input:focus {
+  border: 0.125rem solid #6b769c;
+}
+@media (min-width: 40em) {
+  .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input {
+    padding: 0.6rem 1rem;
+  }
+}
+@media (min-width: 64em) {
+  .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input {
+    padding: 0.7rem 1rem;
+  }
+}
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea {
   height: 13.25rem;
   font-family: inherit;
   font-size: inherit;
   color: hsl(235, 6%, 40%);
   resize: none;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
   background-color: hsl(0, 0%, 85%);
   border: 0.125rem solid hsl(0, 0%, 85%);
@@ -1036,14 +1078,28 @@ p {
   outline: none;
   transition: inherit;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea::-moz-placeholder {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea::-moz-placeholder {
   opacity: 60%;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea::placeholder {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea::placeholder {
   opacity: 60%;
 }
-.contacts .container .contacts_content .contact_us_form form .contact_us_section_container_inputs textarea:focus {
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea:hover {
   border: 0.125rem solid #a5a5a5;
+}
+.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea:focus {
+  border: 0.125rem solid #6b769c;
+}
+@media (min-width: 40em) {
+  .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea {
+    padding: 0.6rem 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 64em) {
+  .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea {
+    padding: 0.7rem 1rem;
+  }
 }
 
 .footer {

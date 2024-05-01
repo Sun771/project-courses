@@ -28,3 +28,12 @@ btnMenu.addEventListener("click", function () {
     });
   }
 });
+
+// Contact form: clearing inputs after "submit" button was pressed
+function resetForm() {
+  const form = document.getElementById("contact_us_form");
+
+  setTimeout(function () {
+    form.reset();
+  }, 300);
+}
