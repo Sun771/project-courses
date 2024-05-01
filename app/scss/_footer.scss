@@ -1,0 +1,163 @@
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+  padding: 2.5rem;
+  text-align: center;
+
+  .container {
+    @include breakpoint_up(medium) {
+      display: grid;
+      grid-template-columns: 1.2fr 2fr 1fr 1fr;
+      grid-template-rows: 1fr 0.7fr;
+      grid-template-areas:
+        "logo socials links_first links_second"
+        "copyright socials links_first links_second";
+      justify-items: right;
+      position: relative;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  &_logo {
+    display: inline-block;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-bottom: 1.875rem;
+
+    @include breakpoint_up(medium) {
+      grid-area: logo;
+      width: 3.75rem;
+      height: 3.75rem;
+      justify-self: left;
+      align-self: start;
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover img {
+      opacity: 0.8;
+    }
+  }
+
+  &_social {
+    margin-bottom: 1.875rem;
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.25rem;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      svg {
+        margin: auto;
+      }
+
+      svg path {
+        transition: fill 200ms ease-in-out;
+      }
+
+      &:hover svg path {
+        fill: $lightOrange;
+      }
+    }
+
+    @include breakpoint-up(small) {
+      a {
+        width: 1.5625rem;
+        height: 1.5625rem;
+
+        svg {
+          transform: scale(120%);
+        }
+
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    @include breakpoint_up(medium) {
+      grid-area: socials;
+      margin-top: 0.3rem;
+      margin-bottom: 0;
+      justify-self: center;
+
+      a {
+        width: 1.6875rem;
+        height: 1.6875rem;
+
+        svg {
+          transform: scale(135%);
+        }
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint_up(medium) {
+      font-size: $font-medium;
+
+      & > a:not(:last-child) {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &.column_first {
+      @include breakpoint_up(medium) {
+        grid-area: links_first;
+      }
+    }
+
+    &.column_second {
+      margin-bottom: 1.875rem;
+
+      @include breakpoint_up(medium) {
+        grid-area: links_second;
+        margin: 0;
+      }
+    }
+
+    a {
+      line-height: 2.25rem;
+      transition: color 200ms ease-in-out;
+
+      @include breakpoint_up(medium) {
+        line-height: 1;
+      }
+
+      &:hover {
+        color: $lightOrange;
+      }
+    }
+  }
+
+  &_copyright {
+    font-size: $font-premedium;
+    color: $lessLightGrayish;
+
+    @include breakpoint_up(medium) {
+      grid-area: copyright;
+      text-align: left;
+      justify-self: left;
+      align-self: end;
+    }
+  }
+}

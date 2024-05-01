@@ -1,0 +1,68 @@
+.about_us {
+  background-color: hsl(220, 14%, 96%);
+
+  .container {
+    .about_us_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .about_us_photos {
+        width: 100%;
+        border-radius: 1.5625rem;
+        object-fit: cover;
+        box-shadow: 0 4px 12px grey;
+      }
+
+      #about_us_photo_first {
+        max-width: 36.9375rem;
+        max-height: 16.25rem;
+        object-position: 0 10%;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint_up(small) {
+          margin-bottom: 2rem;
+        }
+
+        @include breakpoint_up(medium) {
+          max-width: 40rem;
+          max-height: 19rem;
+        }
+
+        @media (min-width: 1300px) {
+          max-width: 50rem;
+          max-height: 25rem;
+        }
+      }
+
+      .main_text {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint_up(small) {
+          padding: 0 2rem;
+          margin-bottom: 2rem;
+        }
+
+        @media (min-width: 1196px) {
+          padding: 0;
+        }
+      }
+
+      #about_us_photo_second {
+        max-width: 24.5rem;
+        max-height: 16.25rem;
+        object-position: 0 20%;
+
+        @include breakpoint_up(medium) {
+          max-width: 30rem;
+          max-height: 20rem;
+        }
+
+        @media (min-width: 1300px) {
+          max-width: 40rem;
+          max-height: 25rem;
+        }
+      }
+    }
+  }
+}

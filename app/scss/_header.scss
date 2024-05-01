@@ -20,6 +20,7 @@
   .overlay {
     opacity: 0;
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -29,6 +30,7 @@
 
   nav {
     position: relative;
+    z-index: 2;
     background-color: $white;
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem;
@@ -43,11 +45,16 @@
     img {
       width: 3.125rem;
       height: auto;
-      transition: opacity 300ms ease-in-out;
+      transition: opacity 200ms ease-in-out;
+
+      @include breakpoint_up(medium) {
+        width: 3.75rem;
+      }
     }
 
     h1 {
-      margin: 0 0 0 0.625rem;
+      margin-left: 0.625rem;
+      margin-bottom: 0;
       white-space: nowrap;
       font-size: $font-medium;
       font-weight: bold;
@@ -56,11 +63,15 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
 
-      transition: opacity 300ms ease-in-out;
+      transition: opacity 200ms ease-in-out;
+
+      @include breakpoint_up(medium) {
+        font-size: $font-prelarge;
+      }
     }
 
     &:hover img,
-    h1 {
+    &:hover h1 {
       opacity: 0.8;
     }
   }
@@ -83,6 +94,7 @@
 
   &_menu {
     position: absolute;
+    z-index: 1;
     width: calc(100% - 3rem);
     left: 50%;
     transform: translateX(-50%);
@@ -102,7 +114,7 @@
   &_links {
     a {
       position: relative;
-      font-size: $font-small;
+      font-size: $font-medium;
       color: $grayishBlue;
       transition: color 200ms ease-in-out;
 

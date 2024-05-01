@@ -1,0 +1,198 @@
+.contacts {
+  position: relative;
+  background-color: hsl(0, 0%, 94%);
+
+  // decorations backgrounds
+  img#background_lines_left_side {
+    display: none;
+
+    @include breakpoint_up(medium) {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  img#background_lines_right_side {
+    display: none;
+
+    @include breakpoint_up(medium) {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .container {
+    .contacts_content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contacts_information_socials {
+        text-align: center;
+
+        .phone_number {
+          margin-bottom: 0.5rem;
+        }
+
+        .email_address {
+          margin-bottom: 1rem;
+        }
+
+        .contacts_socials {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+
+          @include breakpoint_up(small) {
+            margin-bottom: 2rem;
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1.25rem;
+
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+
+            svg {
+              margin: auto;
+            }
+
+            svg path {
+              fill: hsl(233, 26%, 24%);
+              transition: fill 200ms ease-in-out;
+            }
+
+            &:hover svg path {
+              fill: $neutralBlue;
+            }
+          }
+          @include breakpoint-up(small) {
+            a {
+              width: 1.5625rem;
+              height: 1.5625rem;
+
+              svg {
+                transform: scale(120%);
+              }
+
+              &:not(:last-child) {
+                margin-right: 1.5rem;
+              }
+            }
+          }
+
+          @include breakpoint_up(medium) {
+            a {
+              width: 1.6875rem;
+              height: 1.6875rem;
+
+              svg {
+                transform: scale(135%);
+              }
+            }
+          }
+        }
+      }
+
+      .contact_us_form_container {
+        max-width: 31.25rem;
+        width: 100%;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .contact_us_section_container_inputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            outline: none;
+            transition: all 200ms ease-in-out;
+
+            input {
+              color: $colorRegularText;
+              font-size: inherit;
+              padding: 0.5rem 1rem;
+              background-color: hsl(0, 0%, 85%);
+              border: 0.125rem solid hsl(0, 0%, 85%);
+              border-radius: 0.625rem;
+              outline: none;
+              transition: inherit;
+
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+              }
+
+              &::placeholder {
+                opacity: 60%;
+              }
+
+              &:hover {
+                border: 0.125rem solid #a5a5a5;
+              }
+
+              &:focus {
+                border: 0.125rem solid #6b769c;
+              }
+
+              @include breakpoint_up(small) {
+                padding: 0.6rem 1rem;
+              }
+
+              @include breakpoint_up(medium) {
+                padding: 0.7rem 1rem;
+              }
+            }
+
+            textarea {
+              height: 13.25rem;
+              font-family: inherit;
+              font-size: inherit;
+              color: $colorRegularText;
+              resize: none;
+              padding: 0.5rem 1rem;
+              margin-bottom: 1.5rem;
+              background-color: hsl(0, 0%, 85%);
+              border: 0.125rem solid hsl(0, 0%, 85%);
+              border-radius: 0.625rem;
+              outline: none;
+              transition: inherit;
+
+              &::placeholder {
+                opacity: 60%;
+              }
+
+              &:hover {
+                border: 0.125rem solid #a5a5a5;
+              }
+
+              &:focus {
+                border: 0.125rem solid #6b769c;
+              }
+
+              @include breakpoint_up(small) {
+                padding: 0.6rem 1rem;
+                margin-bottom: 2rem;
+              }
+
+              @include breakpoint_up(medium) {
+                padding: 0.7rem 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
