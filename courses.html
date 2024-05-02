@@ -53,24 +53,26 @@
 
     <section class="courses">
       <!-- decorations -->
-      <img
-        class="courses_waves_1_left_side"
-        src="/images/decorations/courses_waves_left_side.svg"
-        alt="Декорація хвилі зліва на головній сторінці в секції курси" />
-      <img
-        class="courses_waves_1_right_side"
-        src="/images/decorations/courses_waves_right_side.svg"
-        alt="Декорація хвилі справа на головній сторінці в секції курси" />
-      <img
-        class="courses_waves_2_left_side"
-        src="/images/decorations/articles_waves_left_side.svg"
-        alt="Декорація хвилі зліва на головній сторінці в секції курси" />
-      <img
-        class="courses_waves_2_right_side"
-        src="/images/decorations/articles_waves_right_side.svg"
-        alt="Декорація хвилі справа на головній сторінці в секції курси" />
-      <!-- /decorations -->
-      <div class="container container_pall">
+      <div class="decorations_container">
+        <img
+          class="courses_waves_1_left_side"
+          src="/images/decorations/courses_waves_left_side.svg"
+          alt="Декорація хвилі зліва на головній сторінці в секції курси" />
+        <img
+          class="courses_waves_1_right_side"
+          src="/images/decorations/courses_waves_right_side.svg"
+          alt="Декорація хвилі справа на головній сторінці в секції курси" />
+        <img
+          class="courses_waves_2_left_side"
+          src="/images/decorations/articles_waves_left_side.svg"
+          alt="Декорація хвилі зліва на головній сторінці в секції курси" />
+        <img
+          class="courses_waves_2_right_side"
+          src="/images/decorations/articles_waves_right_side.svg"
+          alt="Декорація хвилі справа на головній сторінці в секції курси" />
+      </div>
+
+      <div id="courses_page_container_pall" class="container container_pall">
         <div class="text_above">
           <h2>Перегляньте наші курси</h2>
           <p>
@@ -78,11 +80,11 @@
             сертифікат про проходження при успішному закінчені курсу.
           </p>
         </div>
-        <div class="cards_grid">
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+        <div id="cards_flexbox_courses_page" class="cards_flexbox">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
                     src="/images/courses/html.jpg"
                     alt="Фотографія курсу HTML" />
@@ -90,11 +92,11 @@
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова розмітки HTML</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Мова розмітки HTML для створення веб-сторінок. Наш курс
                   дозволить вам освоїти магію веб-розробки, від простих сторінок
@@ -103,22 +105,22 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
                     src="/images/courses/css.jpg"
-                    alt="Фотографія курсу HTML" />
+                    alt="Фотографія курсу CSS" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова стилювання CSS</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Розкрийте свою креативність з нашим курсом CSS. Вивчайте
                   сучасні методи стилізації веб-сторінок і створюйте привабливі
@@ -127,22 +129,20 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
-                  <img
-                    src="/images/courses/js.jpg"
-                    alt="Фотографія курсу HTML" />
+                <div class="card_image">
+                  <img src="/images/courses/js.jpg" alt="Фотографія курсу JS" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова JavaScript</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Навчіться веб-розробці вивчивши JavaScript. Потужна мова
                   програмування для створення інтерактивних веб-додатків та
@@ -151,25 +151,25 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
                     src="/images/courses/nodejs.png"
-                    alt="Фотографія курсу HTML" />
+                    alt="Фотографія курсу Node.js" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>
                     Node.js: Розкрийте свій потенціал у розробці серверних
                     додатків
                   </h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Node.js - потужний інструмент для побудови швидких, ефективних
                   та масштабованих серверних додатків. Ви отримаєте практичні
@@ -180,103 +180,110 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/html.jpg"
-                    alt="Фотографія курсу HTML" />
+                    src="/images/courses/react.jpg"
+                    alt="Фотографія курсу React" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
-                  <h3>Мова розмітки HTML</h3>
+                <div class="card_title">
+                  <h3>React: Майстерність у Розробці Веб-Додатків</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
-                  Мова розмітки HTML для створення веб-сторінок. Наш курс
-                  дозволить вам освоїти магію веб-розробки, від простих сторінок
-                  до складних додатків, використовуючи потужні можливості HTML
+                  Наш курс пропонує інтенсивну практичну підготовку з розробки
+                  високоякісних веб-додатків. Ви поглибите знання з
+                  компонентного підходу, анімації, тестування, інтеграції з API,
+                  оптимізації продуктивності і дізнаєтеся як створювати додатки
+                  з впевненістю
                 </p>
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/css.jpg"
-                    alt="Фотографія курсу HTML" />
+                    src="/images/courses/vuejs.jpg"
+                    alt="Фотографія курсу Vue.js" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
-                  <h3>Мова стилювання CSS</h3>
+                <div class="card_title">
+                  <h3>Vue.js Mastery: Поглиблене вивчення фреймворку</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
-                  Розкрийте свою креативність з нашим курсом CSS. Вивчайте
-                  сучасні методи стилізації веб-сторінок і створюйте привабливі
-                  інтерфейси з ефектами анімації
+                  Наш інтенсивний курс допоможе вам оволодіти наступними
+                  знаннями: розбір компонентної архітектури, фундаментальні
+                  знання з Vue.js, управління станом застосунку з Vuex,
+                  створення додатків з Vue Router та практичне використання
+                  Axios для взаємодії з зовнішніми API та обміну даними
                 </p>
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/js.jpg"
-                    alt="Фотографія курсу HTML" />
+                    src="/images/courses/sass.jpg"
+                    alt="Фотографія курсу SASS/SCSS" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
-                  <h3>Мова JavaScript</h3>
-                </div>
-              </div>
-              <div class="course_description">
-                <p>
-                  Навчіться веб-розробці вивчивши JavaScript. Потужна мова
-                  програмування для створення інтерактивних веб-додатків та
-                  додавання динаміки до ваших веб-сайтів
-                </p>
-              </div>
-            </div>
-          </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
-              <div class="wrapper_img_author_title">
-                <div class="course_image">
-                  <img
-                    src="/images/courses/nodejs.png"
-                    alt="Фотографія курсу HTML" />
-                </div>
-                <div class="author">
-                  <p>Автори: Senior розробники компанії "Розум"</p>
-                </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>
-                    Node.js: Розкрийте свій потенціал у розробці серверних
-                    додатків
+                    SASS/SCSS Основи: Запрошення у світ просунутої стилізації
                   </h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
-                  Node.js - потужний інструмент для побудови швидких, ефективних
-                  та масштабованих серверних додатків. Ви отримаєте практичні
-                  навички з розробки API, веб-серверів, асинхронного
-                  програмування, обробки баз даних, роботи з пакетним менеджером
-                  npm та створення модульних додатків.
+                  Навчіться створювати структуровані та ефективні стилі за
+                  допомогою SASS/SCSS. Використовуйте змінні, вкладеності,
+                  міксіни та імпорти, щоб підвищити продуктивність розробки.
+                  Створюйте динамічні стилі з можливістю їх повторного
+                  використання. Вивчіть найкращі практики організації коду з
+                  використанням SASS/SCSS
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
+              <div class="wrapper_img_author_title">
+                <div class="card_image">
+                  <img
+                    src="/images/courses/angular.jpg"
+                    alt="Фотографія курсу Angular" />
+                </div>
+                <div class="author">
+                  <p>Автори: Senior розробники компанії "Розум"</p>
+                </div>
+                <div class="card_title">
+                  <h3>Angular Masterclass: Підвищення рівня професіоналізму</h3>
+                </div>
+              </div>
+              <div class="card_description">
+                <p>
+                  Наш курс допоможе вам освоїти сучасні практики розробки,
+                  засвоїти навички створення розширюваних та швидких додатків, а
+                  також забезпечить розуміння найкращих підходів до архітектури
+                  веб-проектів. Також ви вивчите техніки розробки, роботу з
+                  формами, анімації, інтеграцію з зовнішніми API та оптимізацію
+                  продуктивності.
                 </p>
               </div>
             </div>

@@ -1,4 +1,20 @@
 .courses {
+  #cards_flexbox_courses_page {
+    margin-bottom: 0;
+
+    a.link_card_item:last-child {
+      .card_item {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint_up(medium) {
+    #courses_page_container_pall.container_pall {
+      padding-top: 6rem;
+    }
+  }
+
   // decorations
   img.courses_waves_1_left_side,
   img.courses_waves_1_right_side,

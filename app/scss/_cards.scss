@@ -1,0 +1,172 @@
+.link_card_item {
+  color: $colorRegularText;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+.courses {
+  background-color: $lightGrayishBlue;
+  position: relative;
+  text-align: center;
+
+  .enables_when_desktop {
+    display: none;
+
+    @include breakpoint_up(medium) {
+      display: block;
+    }
+  }
+
+  @include breakpoint_up(medium) {
+    .container_pall {
+      padding-top: 3rem;
+    }
+  }
+}
+
+.card {
+  &_item {
+    position: relative;
+    max-width: 19rem;
+    background-color: $white;
+    border-radius: 0.625rem;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+    .wrapper_img_author_title {
+      .card_image {
+        line-height: 0;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 0.625rem;
+          box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
+        }
+      }
+
+      .card_title {
+        h3 {
+          font-weight: 400;
+          text-align: center;
+          padding: 0.5rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card_description {
+      p {
+        margin: 0;
+        padding: 0 0.5rem 0.75rem;
+      }
+    }
+
+    @include breakpoint_up(small) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 37rem;
+      width: 37rem;
+
+      .wrapper_img_author_title {
+        display: flex;
+        flex-direction: column;
+        max-width: 17rem;
+
+        .author {
+          order: 2;
+
+          p {
+            padding: 0 0.5rem 0.75rem;
+          }
+
+          @include breakpoint_up(medium) {
+            order: 1;
+
+            p {
+              padding: 0 1.25rem;
+            }
+          }
+        }
+
+        .card_title {
+          order: 1;
+
+          h3 {
+            padding: 0.75rem 0.5rem 0.5rem;
+          }
+
+          @include breakpoint_up(medium) {
+            order: 2;
+
+            h3 {
+              padding: 0 0.5rem 0.75rem;
+            }
+          }
+        }
+      }
+
+      .card_description {
+        p {
+          max-width: 19rem;
+          text-align: left;
+          margin: 0;
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    @include breakpoint_up(medium) {
+      flex-direction: column;
+      max-width: 29.5rem;
+      flex: 1;
+      margin: 0;
+
+      .wrapper_img_author_title {
+        max-width: 100%;
+
+        .card_image {
+          img {
+            height: 15.3125rem;
+          }
+        }
+
+        .card_title {
+          width: 100%;
+          padding: 0 1.25rem;
+          margin-bottom: 1rem;
+
+          h3 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      .card_description {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 1rem;
+
+        p {
+          max-width: 100%;
+          padding: 0;
+          text-align: left;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 520px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0.625rem 0.3125rem rgb(215, 215, 215);
+      transform: scale(101%);
+    }
+  }
+}
