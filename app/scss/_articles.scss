@@ -12,13 +12,13 @@ p {
   text-align: center;
 
   // decorations
-  img#articles_waves_left_side,
-  img#articles_waves_right_side {
+  img.articles_waves_left_side,
+  img.articles_waves_right_side {
     display: none;
   }
 
   @include breakpoint_up(small) {
-    img#articles_waves_left_side {
+    img.articles_waves_left_side {
       display: block;
       position: absolute;
       width: 3rem;
@@ -27,7 +27,7 @@ p {
       left: 0%;
     }
 
-    img#articles_waves_right_side {
+    img.articles_waves_right_side {
       display: block;
       position: absolute;
       width: 4rem;
@@ -38,8 +38,8 @@ p {
   }
 
   @include breakpoint_up(medium) {
-    img#articles_waves_left_side,
-    img#articles_waves_right_side {
+    img.articles_waves_left_side,
+    img.articles_waves_right_side {
       display: none;
     }
   }

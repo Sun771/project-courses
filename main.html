@@ -31,9 +31,9 @@
         </a>
 
         <div class="header_links hide_for_mobile">
-          <a href="#">Головна</a>
+          <a href="/main.html">Головна</a>
           <a href="/courses.html">Курси</a>
-          <a href="#">Блог</a>
+          <a href="/articles.html">Блог</a>
           <a href="#">Про нас</a>
           <a href="#">Контакти</a>
         </div>
@@ -43,9 +43,9 @@
 
       <div class="header_menu contains-fade">
         <a href="">Ввійти</a>
-        <a href="">Головна</a>
-        <a href="">Курси</a>
-        <a href="">Блог</a>
+        <a href="/main.html">Головна</a>
+        <a href="/courses.html">Курси</a>
+        <a href="/articles.html">Блог</a>
         <a href="">Про нас</a>
         <a href="">Контакти</a>
       </div>
@@ -69,11 +69,11 @@
     <section class="courses">
       <!-- decorations -->
       <img
-        id="courses_waves_left_side"
+        class="courses_waves_left_side"
         src="/images/decorations/courses_waves_left_side.svg"
         alt="Декорація хвилі зліва на головній сторінці в секції курси" />
       <img
-        id="courses_waves_right_side"
+        class="courses_waves_right_side"
         src="/images/decorations/courses_waves_right_side.svg"
         alt="Декорація хвилі справа на головній сторінці в секції курси" />
       <!-- /decorations -->
@@ -158,6 +158,37 @@
               </div>
             </div>
           </a>
+          <div class="enables_when_desktop">
+            <a class="link_course_item" href="/courses.html">
+              <div class="course_item">
+                <div class="wrapper_img_author_title">
+                  <div class="course_image">
+                    <img
+                      src="/images/courses/nodejs.png"
+                      alt="Фотографія курсу HTML" />
+                  </div>
+                  <div class="author">
+                    <p>Автори: Senior розробники компанії "Розум"</p>
+                  </div>
+                  <div class="course_title">
+                    <h3>
+                      Node.js: Розкрийте свій потенціал у розробці серверних
+                      додатків
+                    </h3>
+                  </div>
+                </div>
+                <div class="course_description">
+                  <p>
+                    Node.js - потужний інструмент для побудови швидких,
+                    ефективних та масштабованих серверних додатків. Ви отримаєте
+                    практичні навички з розробки API, веб-серверів, асинхронного
+                    програмування, обробки баз даних, роботи з пакетним
+                    менеджером npm та створення модульних додатків.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <a href="/courses.html" class="button">Переглянути всі курси</a>
       </div>
@@ -165,16 +196,15 @@
 
     <section class="articles">
       <!-- decorations -->
-      <!-- FIXME id repeats two times -->
       <img
-        id="articles_waves_left_side"
+        class="articles_waves_left_side"
         src="/images/decorations/articles_waves_left_side.svg"
         alt="Декорація хвилі зліва на головній сторінці в секції курси" />
       <img
-        id="articles_waves_right_side"
+        class="articles_waves_right_side"
         src="/images/decorations/articles_waves_right_side.svg"
         alt="Декорація хвилі справа на головній сторінці в секції курси" />
-      <!-- /decorations -->
+
       <div class="container container_pall">
         <div class="text_above">
           <h2>Наші останні статті</h2>
