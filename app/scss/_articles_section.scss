@@ -1,9 +1,5 @@
+// decorations
 .articles {
-  background-color: $lightGrayish;
-  position: relative;
-  text-align: center;
-
-  // decorations
   img.articles_waves_left_side,
   img.articles_waves_right_side {
     display: none;
@@ -15,7 +11,7 @@
       position: absolute;
       width: 3rem;
       height: auto;
-      top: 15%;
+      top: 20%;
       left: 0%;
     }
 
@@ -24,7 +20,7 @@
       position: absolute;
       width: 4rem;
       height: auto;
-      top: 45%;
+      top: 50%;
       right: 0%;
     }
   }

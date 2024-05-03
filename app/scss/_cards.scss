@@ -20,7 +20,7 @@ p {
   }
 
   @include breakpoint_up(medium) {
-    .container_pall {
+    #courses_container_pall.container_pall {
       padding-top: 3rem;
     }
   }

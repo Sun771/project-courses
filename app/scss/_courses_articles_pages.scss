@@ -1,0 +1,29 @@
+.courses {
+  background-color: $lightGrayishBlue;
+}
+
+.articles {
+  background-color: $lightGrayish;
+}
+
+.courses,
+.articles {
+  position: relative;
+  text-align: center;
+
+  .cards_flexbox_pages {
+    margin-bottom: 0;
+
+    a.link_card_item:last-child {
+      .card_item {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint_up(medium) {
+    .pages_container_pall.container_pall {
+      padding-top: 6rem;
+    }
+  }
+}
