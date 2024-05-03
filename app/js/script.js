@@ -29,6 +29,21 @@ btnMenu.addEventListener("click", function () {
   }
 });
 
+// Mobile/tablet header menu -> links clicked -> close overlay
+function closeOverlay() {
+  if (header.classList.contains("open")) {
+    // closing
+    body.classList.remove("without-scroll");
+    header.classList.remove("open");
+    fadeElems.forEach(function (element) {
+      element.classList.remove("fade-in");
+      element.classList.add("fade-out");
+    });
+    overlay.classList.remove("fade-in");
+    overlay.classList.add("fade-out");
+  }
+}
+
 // Contact form: clearing inputs after "submit" button was pressed
 function resetForm() {
   const form = document.getElementById("contact_us_form");
