@@ -1,0 +1,55 @@
+.courses,
+.articles {
+  // decorations
+  img.waves_1_left_side,
+  img.waves_1_right_side,
+  img.waves_2_left_side,
+  img.waves_2_right_side {
+    display: none;
+  }
+
+  // decorations' parameters for breakpoint small
+  @mixin decor_param_break_small {
+    display: block;
+    position: absolute;
+    width: 2.8rem;
+    height: auto;
+  }
+
+  @include breakpoint_up(small) {
+    img.waves_1_left_side {
+      @include decor_param_break_small();
+      top: 15%;
+      left: 0%;
+    }
+
+    img.waves_1_right_side {
+      @include decor_param_break_small();
+      width: 3.5rem;
+      top: 35%;
+      right: 0%;
+    }
+
+    img.waves_2_left_side {
+      @include decor_param_break_small();
+      top: 55%;
+      left: 0%;
+    }
+
+    img.waves_2_right_side {
+      @include decor_param_break_small();
+      width: 3.5rem;
+      top: 80%;
+      right: 0%;
+    }
+  }
+
+  @include breakpoint_up(medium) {
+    img.waves_1_left_side,
+    img.waves_1_right_side,
+    img.waves_2_left_side,
+    img.waves_2_right_side {
+      display: none;
+    }
+  }
+}

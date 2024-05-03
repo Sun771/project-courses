@@ -560,21 +560,21 @@ p {
   margin: 0 0 2rem;
 }
 
-.courses {
-  background-color: hsl(220, 16%, 96%);
+.cards_global_container {
+  background-color: hsl(220, 14%, 96%);
   position: relative;
   text-align: center;
 }
-.courses .enables_when_desktop {
+.cards_global_container .enables_when_desktop {
   display: none;
 }
 @media (min-width: 64em) {
-  .courses .enables_when_desktop {
+  .cards_global_container .enables_when_desktop {
     display: block;
   }
 }
 @media (min-width: 64em) {
-  .courses .container_pall {
+  .cards_global_container .container_pall {
     padding-top: 3rem;
   }
 }
@@ -702,14 +702,6 @@ p {
   transform: scale(101%);
 }
 
-.link_article_item {
-  color: hsl(235, 6%, 40%);
-}
-
-p {
-  margin: 0 0 2rem;
-}
-
 .articles {
   background-color: hsl(0, 0%, 94%);
   position: relative;
@@ -742,132 +734,6 @@ p {
   .articles img.articles_waves_right_side {
     display: none;
   }
-}
-
-.article_item {
-  position: relative;
-  max-width: 19rem;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 0.625rem;
-  transition: all 200ms ease-in-out;
-  cursor: pointer;
-  margin-bottom: 2rem;
-}
-.article_item .wrapper_img_author_title .article_image {
-  line-height: 0;
-}
-.article_item .wrapper_img_author_title .article_image img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.625rem;
-  box-shadow: 0 0 0.625rem 0.125rem rgb(215, 215, 215);
-}
-.article_item .wrapper_img_author_title .article_title h2 {
-  padding: 0.5rem;
-  margin-bottom: 0;
-}
-@media (min-width: 64em) {
-  .article_item .wrapper_img_author_title .article_title h2 {
-    padding: 0;
-  }
-}
-.article_item .article_description p {
-  margin: 0;
-  padding: 0 0.5rem 0.75rem;
-}
-@media (min-width: 40em) {
-  .article_item {
-    display: flex;
-    justify-content: space-between;
-    max-width: 37rem;
-    width: 37rem;
-  }
-  .article_item .wrapper_img_author_title {
-    display: flex;
-    flex-direction: column;
-    max-width: 17rem;
-  }
-  .article_item .wrapper_img_author_title .author {
-    order: 2;
-  }
-  .article_item .wrapper_img_author_title .author p {
-    padding: 0 0.5rem 0.75rem;
-  }
-}
-@media (min-width: 40em) and (min-width: 64em) {
-  .article_item .wrapper_img_author_title .author {
-    order: 1;
-  }
-  .article_item .wrapper_img_author_title .author p {
-    padding: 0;
-  }
-}
-@media (min-width: 40em) {
-  .article_item .wrapper_img_author_title .article_title {
-    order: 1;
-  }
-  .article_item .wrapper_img_author_title .article_title h3 {
-    padding: 0.75rem 0.5rem 0.5rem;
-  }
-}
-@media (min-width: 40em) and (min-width: 64em) {
-  .article_item .wrapper_img_author_title .article_title {
-    order: 2;
-  }
-  .article_item .wrapper_img_author_title .article_title h3 {
-    padding: 0 0.5rem 0.75rem;
-  }
-}
-@media (min-width: 40em) {
-  .article_item .article_description p {
-    max-width: 19rem;
-    text-align: left;
-    margin: 0;
-    padding: 0.5rem;
-  }
-}
-@media (min-width: 64em) {
-  .article_item {
-    flex-direction: column;
-    max-width: 19.5rem;
-    flex: 1;
-    margin: 0;
-  }
-  .article_item .wrapper_img_author_title {
-    max-width: 100%;
-  }
-  .article_item .wrapper_img_author_title .article_image img {
-    height: 10.31rem;
-  }
-  .article_item .wrapper_img_author_title .article_title {
-    width: 90%;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-  }
-  .article_item .wrapper_img_author_title .article_title h3 {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-  .article_item .article_description {
-    width: 90%;
-    margin-inline: auto;
-    margin-bottom: 0.75rem;
-  }
-  .article_item .article_description p {
-    max-width: 100%;
-    padding: 0;
-    text-align: left;
-  }
-}
-.article_item:hover {
-  box-shadow: 0 0 0.625rem 0.3125rem rgb(215, 215, 215);
-  transform: scale(101%);
-}
-.article_title h3 {
-  text-align: center;
-  margin-bottom: 0;
-  padding: 0.5rem;
 }
 
 .about_us {
@@ -1268,6 +1134,11 @@ p {
   }
 }
 
+.courses {
+  background-color: hsl(220, 14%, 96%);
+  position: relative;
+  text-align: center;
+}
 .courses #cards_flexbox_courses_page {
   margin-bottom: 0;
 }
@@ -1279,51 +1150,66 @@ p {
     padding-top: 6rem;
   }
 }
-.courses img.courses_waves_1_left_side,
-.courses img.courses_waves_1_right_side,
-.courses img.courses_waves_2_left_side,
-.courses img.courses_waves_2_right_side {
+
+.courses img.waves_1_left_side,
+.courses img.waves_1_right_side,
+.courses img.waves_2_left_side,
+.courses img.waves_2_right_side,
+.articles img.waves_1_left_side,
+.articles img.waves_1_right_side,
+.articles img.waves_2_left_side,
+.articles img.waves_2_right_side {
   display: none;
 }
 @media (min-width: 40em) {
-  .courses img.courses_waves_1_left_side {
+  .courses img.waves_1_left_side,
+  .articles img.waves_1_left_side {
     display: block;
     position: absolute;
-    width: 3rem;
+    width: 2.8rem;
     height: auto;
     top: 15%;
     left: 0%;
   }
-  .courses img.courses_waves_1_right_side {
+  .courses img.waves_1_right_side,
+  .articles img.waves_1_right_side {
     display: block;
     position: absolute;
-    width: 3rem;
+    width: 2.8rem;
     height: auto;
+    width: 3.5rem;
     top: 35%;
     right: 0%;
   }
-  .courses img.courses_waves_2_left_side {
+  .courses img.waves_2_left_side,
+  .articles img.waves_2_left_side {
     display: block;
     position: absolute;
-    width: 3rem;
+    width: 2.8rem;
     height: auto;
     top: 55%;
     left: 0%;
   }
-  .courses img.courses_waves_2_right_side {
+  .courses img.waves_2_right_side,
+  .articles img.waves_2_right_side {
     display: block;
     position: absolute;
-    width: 3rem;
+    width: 2.8rem;
     height: auto;
+    width: 3.5rem;
     top: 80%;
     right: 0%;
   }
 }
 @media (min-width: 64em) {
-  .courses img.courses_waves_1_left_side,
-  .courses img.courses_waves_1_right_side,
-  .courses img.courses_waves_2_left_side,
-  .courses img.courses_waves_2_right_side {
+  .courses img.waves_1_left_side,
+  .courses img.waves_1_right_side,
+  .courses img.waves_2_left_side,
+  .courses img.waves_2_right_side,
+  .articles img.waves_1_left_side,
+  .articles img.waves_1_right_side,
+  .articles img.waves_2_left_side,
+  .articles img.waves_2_right_side {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
