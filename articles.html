@@ -24,30 +24,39 @@
           <h1>Розум!</h1>
         </a>
 
+        <!-- header toggle of menu -->
         <a id="btnMenu" href="#" class="header_toggle hide_for_desktop">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
+        <!-- desktop navigation menu -->
         <div class="header_links hide_for_mobile">
           <a href="/main.html">Головна</a>
           <a href="/courses.html">Курси</a>
           <a href="/articles.html">Блог</a>
-          <a href="#">Про нас</a>
-          <a href="#">Контакти</a>
+          <a href="/main.html#about_us_section">Про нас</a>
+          <a href="/main.html#contacts_section">Контакти</a>
         </div>
 
-        <a href="#" class="button header_cta hide_for_mobile">Ввійти</a>
+        <a href="/login.html" class="button header_cta hide_for_mobile">
+          Ввійти
+        </a>
       </nav>
 
+      <!-- mobile/tablet header menu -->
       <div class="header_menu contains-fade">
-        <a href="">Ввійти</a>
-        <a href="/main.html">Головна</a>
-        <a href="/courses.html">Курси</a>
-        <a href="/articles.html">Блог</a>
-        <a href="">Про нас</a>
-        <a href="">Контакти</a>
+        <a href="/login.html" onclick="closeOverlay()">Ввійти</a>
+        <a href="/main.html" onclick="closeOverlay()">Головна</a>
+        <a href="/courses.html" onclick="closeOverlay()">Курси</a>
+        <a href="/articles.html" onclick="closeOverlay()">Блог</a>
+        <a href="/main.html#about_us_section" onclick="closeOverlay()">
+          Про нас
+        </a>
+        <a href="/main.html#contacts_section" onclick="closeOverlay()">
+          Контакти
+        </a>
       </div>
     </header>
 
@@ -297,13 +306,13 @@
 
     <footer class="footer">
       <div class="container container_px">
-        <a href="#" class="footer_logo">
+        <a href="/main.html" class="footer_logo">
           <img src="/images/science_logo.png" alt="Лого веб-сайту" />
         </a>
 
         <div class="footer_social">
           <!-- facebook -->
-          <a href="#">
+          <a href="https://www.facebook.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <title>Facebook</title>
               <path
@@ -312,7 +321,7 @@
             </svg>
           </a>
           <!-- instagram -->
-          <a href="#">
+          <a href="https://www.instagram.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
               <title>Instagram</title>
               <path
@@ -321,7 +330,7 @@
             </svg>
           </a>
           <!-- twitter -->
-          <a href="#">
+          <a href="https://twitter.com/home?lang=en" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
               <title>Twitter</title>
               <path
@@ -330,7 +339,7 @@
             </svg>
           </a>
           <!-- youtube -->
-          <a href="#">
+          <a href="https://www.youtube.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
               <title>YouTube</title>
               <path
@@ -339,7 +348,7 @@
             </svg>
           </a>
           <!-- pinterest -->
-          <a href="#">
+          <a href="https://www.pinterest.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <title>Pinterest</title>
               <path
@@ -350,18 +359,20 @@
         </div>
 
         <div class="footer_links column_first">
-          <a href="#">Головна</a>
-          <a href="#">Курси</a>
-          <a href="#">Блог</a>
+          <a href="/main.html">Головна</a>
+          <a href="/courses.html">Курси</a>
+          <a href="/articles.html">Блог</a>
         </div>
 
         <div class="footer_links column_second">
-          <a href="#">Про нас</a>
-          <a href="#">Контакти</a>
+          <a href="/main.html#about_us_section">Про нас</a>
+          <a href="/main.html#contacts_section">Контакти</a>
         </div>
 
         <div class="footer_copyright">&copy; Розум! Всі права захищені.</div>
       </div>
     </footer>
+
+    <script src="/app/js/script.js"></script>
   </body>
 </html>
