@@ -1,4 +1,4 @@
-.link_course_item {
+.link_card_item {
   color: $colorRegularText;
 }
 
@@ -6,50 +6,27 @@ p {
   margin: 0 0 2rem;
 }
 
-.courses {
+.cards_global_container {
   background-color: $lightGrayishBlue;
   position: relative;
   text-align: center;
 
-  // decorations
-  img#courses_waves_left_side,
-  img#courses_waves_right_side {
+  .enables_when_desktop {
     display: none;
-  }
 
-  @include breakpoint_up(small) {
-    img#courses_waves_left_side {
+    @include breakpoint_up(medium) {
       display: block;
-      position: absolute;
-      width: 3rem;
-      height: auto;
-      top: 15%;
-      left: 0%;
-    }
-
-    img#courses_waves_right_side {
-      display: block;
-      position: absolute;
-      width: 4rem;
-      height: auto;
-      top: 45%;
-      right: 0%;
     }
   }
 
   @include breakpoint_up(medium) {
-    img#courses_waves_left_side,
-    img#courses_waves_right_side {
-      display: none;
+    #courses_container_pall.container_pall {
+      padding-top: 3rem;
     }
-  }
-
-  .container_pall {
-    padding-top: 3rem;
   }
 }
 
-.course {
+.card {
   &_item {
     position: relative;
     max-width: 19rem;
@@ -60,7 +37,7 @@ p {
     margin-bottom: 2rem;
 
     .wrapper_img_author_title {
-      .course_image {
+      .card_image {
         line-height: 0;
 
         img {
@@ -71,7 +48,7 @@ p {
         }
       }
 
-      .course_title {
+      .card_title {
         h3 {
           font-weight: 400;
           text-align: center;
@@ -81,7 +58,7 @@ p {
       }
     }
 
-    .course_description {
+    .card_description {
       p {
         margin: 0;
         padding: 0 0.5rem 0.75rem;
@@ -110,12 +87,12 @@ p {
             order: 1;
 
             p {
-              padding: 0;
+              padding: 0 1.25rem;
             }
           }
         }
 
-        .course_title {
+        .card_title {
           order: 1;
 
           h3 {
@@ -132,7 +109,7 @@ p {
         }
       }
 
-      .course_description {
+      .card_description {
         p {
           max-width: 19rem;
           text-align: left;
@@ -144,36 +121,36 @@ p {
 
     @include breakpoint_up(medium) {
       flex-direction: column;
-      max-width: 19.5rem;
+      max-width: 29.5rem;
       flex: 1;
       margin: 0;
 
       .wrapper_img_author_title {
         max-width: 100%;
 
-        .course_image {
+        .card_image {
           img {
-            height: 10.31rem;
+            height: 15.3125rem;
           }
         }
 
-        .course_title {
-          width: 90%;
-          margin-inline: auto;
+        .card_title {
+          width: 100%;
+          padding: 0 1.25rem;
           margin-bottom: 1rem;
 
           h3 {
-            text-align: left;
+            text-align: center;
             margin: 0;
             padding: 0;
           }
         }
       }
 
-      .course_description {
-        width: 90%;
-        margin-inline: auto;
-        margin-bottom: 0.75rem;
+      .card_description {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 1rem;
 
         p {
           max-width: 100%;
@@ -181,6 +158,10 @@ p {
           text-align: left;
         }
       }
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 520px;
     }
 
     &:hover {

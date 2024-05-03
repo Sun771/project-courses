@@ -19,35 +19,44 @@
     <header class="header">
       <div class="overlay contains-fade"></div>
       <nav class="container container_pall flex flex-jc-sb flex-ai-c">
-        <a href="#" class="header_logo">
+        <a href="/main.html" class="header_logo">
           <img src="/images/science_logo.png" alt="Лого веб-сайту" />
           <h1>Розум!</h1>
         </a>
 
+        <!-- header toggle of menu -->
         <a id="btnMenu" href="#" class="header_toggle hide_for_desktop">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
+        <!-- desktop navigation menu -->
         <div class="header_links hide_for_mobile">
-          <a href="#">Головна</a>
+          <a href="/main.html">Головна</a>
           <a href="/courses.html">Курси</a>
-          <a href="#">Блог</a>
-          <a href="#">Про нас</a>
-          <a href="#">Контакти</a>
+          <a href="/articles.html">Блог</a>
+          <a href="/main.html#about_us_section">Про нас</a>
+          <a href="/main.html#contacts_section">Контакти</a>
         </div>
 
-        <a href="#" class="button header_cta hide_for_mobile">Ввійти</a>
+        <a href="/login.html" class="button header_cta hide_for_mobile">
+          Ввійти
+        </a>
       </nav>
 
+      <!-- mobile/tablet header menu -->
       <div class="header_menu contains-fade">
-        <a href="">Ввійти</a>
-        <a href="">Головна</a>
-        <a href="">Курси</a>
-        <a href="">Блог</a>
-        <a href="">Про нас</a>
-        <a href="">Контакти</a>
+        <a href="/login.html" onclick="closeOverlay()">Ввійти</a>
+        <a href="/main.html" onclick="closeOverlay()">Головна</a>
+        <a href="/courses.html" onclick="closeOverlay()">Курси</a>
+        <a href="/articles.html" onclick="closeOverlay()">Блог</a>
+        <a href="/main.html#about_us_section" onclick="closeOverlay()">
+          Про нас
+        </a>
+        <a href="/main.html#contacts_section" onclick="closeOverlay()">
+          Контакти
+        </a>
       </div>
     </header>
 
@@ -66,18 +75,18 @@
       </div>
     </section>
 
-    <section class="courses">
+    <section class="courses cards_global_container">
       <!-- decorations -->
       <img
-        id="courses_waves_left_side"
-        src="/images/decorations/courses_waves_left_side.svg"
+        id="courses_section_waves_left_side"
+        src="/images/decorations/waves_1_left_side.svg"
         alt="Декорація хвилі зліва на головній сторінці в секції курси" />
       <img
-        id="courses_waves_right_side"
-        src="/images/decorations/courses_waves_right_side.svg"
+        id="courses_section_waves_right_side"
+        src="/images/decorations/waves_1_right_side.svg"
         alt="Декорація хвилі справа на головній сторінці в секції курси" />
-      <!-- /decorations -->
-      <div class="container container_pall">
+
+      <div id="courses_container_pall" class="container container_pall">
         <div class="text_above">
           <h2>Перегляньте наші курси</h2>
           <p>
@@ -85,23 +94,23 @@
             сертифікат про проходження при успішному закінчені курсу.
           </p>
         </div>
-        <div class="cards_grid">
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+        <div class="cards_flexbox">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/html.jpg"
+                    src="/images/technologies/html.jpg"
                     alt="Фотографія курсу HTML" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова розмітки HTML</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Мова розмітки HTML для створення веб-сторінок. Наш курс
                   дозволить вам освоїти магію веб-розробки, від простих сторінок
@@ -110,22 +119,22 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/css.jpg"
+                    src="/images/technologies/css.jpg"
                     alt="Фотографія курсу HTML" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова стилювання CSS</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Розкрийте свою креативність з нашим курсом CSS. Вивчайте
                   сучасні методи стилізації веб-сторінок і створюйте привабливі
@@ -134,22 +143,22 @@
               </div>
             </div>
           </a>
-          <a class="link_course_item" href="/courses.html">
-            <div class="course_item">
+          <a class="link_card_item" href="/courses.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="course_image">
+                <div class="card_image">
                   <img
-                    src="/images/courses/js.jpg"
+                    src="/images/technologies/js.jpg"
                     alt="Фотографія курсу HTML" />
                 </div>
                 <div class="author">
                   <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="course_title">
+                <div class="card_title">
                   <h3>Мова JavaScript</h3>
                 </div>
               </div>
-              <div class="course_description">
+              <div class="card_description">
                 <p>
                   Навчіться веб-розробці вивчивши JavaScript. Потужна мова
                   програмування для створення інтерактивних веб-додатків та
@@ -158,23 +167,53 @@
               </div>
             </div>
           </a>
+          <div class="enables_when_desktop">
+            <a class="link_card_item" href="/courses.html">
+              <div class="card_item">
+                <div class="wrapper_img_author_title">
+                  <div class="card_image">
+                    <img
+                      src="/images/technologies/nodejs.png"
+                      alt="Фотографія курсу HTML" />
+                  </div>
+                  <div class="author">
+                    <p>Автори: Senior розробники компанії "Розум"</p>
+                  </div>
+                  <div class="card_title">
+                    <h3>
+                      Node.js: Розкрийте свій потенціал у розробці серверних
+                      додатків
+                    </h3>
+                  </div>
+                </div>
+                <div class="card_description">
+                  <p>
+                    Node.js - потужний інструмент для побудови швидких,
+                    ефективних та масштабованих серверних додатків. Ви отримаєте
+                    практичні навички з розробки API, веб-серверів, асинхронного
+                    програмування, обробки баз даних, роботи з пакетним
+                    менеджером npm та створення модульних додатків.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <a href="/courses.html" class="button">Переглянути всі курси</a>
       </div>
     </section>
 
-    <section class="articles">
+    <section class="articles cards_global_container">
       <!-- decorations -->
-      <!-- FIXME id repeats two times -->
       <img
-        id="articles_waves_left_side"
-        src="/images/decorations/articles_waves_left_side.svg"
+        class="articles_waves_left_side"
+        src="/images/decorations/waves_2_left_side.svg"
         alt="Декорація хвилі зліва на головній сторінці в секції курси" />
       <img
-        id="articles_waves_right_side"
-        src="/images/decorations/articles_waves_right_side.svg"
+        class="articles_waves_right_side"
+        src="/images/decorations/waves_2_right_side.svg"
         alt="Декорація хвилі справа на головній сторінці в секції курси" />
-      <!-- /decorations -->
+
       <div class="container container_pall">
         <div class="text_above">
           <h2>Наші останні статті</h2>
@@ -183,91 +222,120 @@
             веб-розробки.
           </p>
         </div>
-        <div class="cards_grid">
-          <a class="link_article_item" href="/articles.html">
-            <div class="article_item">
+        <div class="cards_flexbox">
+          <a class="link_card_item" href="/articles.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="article_image">
+                <div class="card_image">
                   <img
-                    src="/images/articles/js_how_to_use_in_html_page.jpg"
+                    src="/images/technologies/js_how_to_use_in_html_page.jpg"
                     alt="Фотографія статті про JS" />
                 </div>
                 <div class="author">
-                  <p>Автор: Володимир, Senior веб-розробник</p>
+                  <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="article_title">
+                <div class="card_title">
                   <h3>Як використовувати JavaScript в HTML сторінці</h3>
                 </div>
               </div>
-              <div class="article_description">
+              <div class="card_description">
                 <p>
                   Дізнайтесь, як JavaScript може динамічно трансформувати ваші
                   HTML сторінки, надаючи їм інтерактивності та функціональності.
                   Ключові методи і прийоми використання JavaScript для
-                  досягнення найкращих результатів у вашому веб-проекті.
+                  досягнення найкращих результатів у вашому веб-проекті
                 </p>
               </div>
             </div>
           </a>
-          <a class="link_article_item" href="/articles.html">
-            <div class="article_item">
+          <a class="link_card_item" href="/articles.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="article_image">
+                <div class="card_image">
                   <img
-                    src="/images/articles/js_importance.png"
+                    src="/images/technologies/js_importance.png"
                     alt="Фотографія статті про JS" />
                 </div>
                 <div class="author">
-                  <p>Автор: Олександр, Senior веб-розробник</p>
+                  <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="article_title">
+                <div class="card_title">
                   <h3>Важливість JavaScript у веб-розробці</h3>
                 </div>
               </div>
-              <div class="article_description">
+              <div class="card_description">
                 <p>
                   JavaScript є необхідним інструментом у сучасній веб-розробці,
-                  дозволяючи створювати динамічні інтерфейси та забезпечуючи
+                  який дозволяє створювати динамічні інтерфейси та забезпечує
                   взаємодію користувача з веб-сайтом без перезавантаження
                   сторінки. Дізнайтесь, як JavaScript допомагає покращити
-                  швидкість, функціональність та ефективність вашого
-                  веб-проекту.
+                  швидкість, функціональність та ефективність вашого веб-проекту
                 </p>
               </div>
             </div>
           </a>
-          <a class="link_article_item" href="/articles.html">
-            <div class="article_item">
+          <a class="link_card_item" href="/articles.html">
+            <div class="card_item">
               <div class="wrapper_img_author_title">
-                <div class="article_image">
+                <div class="card_image">
                   <img
-                    src="/images/articles/sass.jpg"
-                    alt="Фотографія статті про SASS" />
+                    src="/images/technologies/sass.jpg"
+                    alt="Фотографія статті про SASS/SCSS" />
                 </div>
                 <div class="author">
-                  <p>Автор: Ірина, Senior веб-розробник</p>
+                  <p>Автори: Senior розробники компанії "Розум"</p>
                 </div>
-                <div class="article_title">
+                <div class="card_title">
                   <h3>Стилізація веб-сторінок за допомогою SASS та SCSS</h3>
                 </div>
               </div>
-              <div class="article_description">
+              <div class="card_description">
                 <p>
-                  SASS та SCSS дозволяють створювати зручніші, модульні стилі, з
-                  можливістю повторного використання, для веб-сторінок, зокрема
+                  SASS та SCSS дозволяють створювати зручніші, модульні стилі з
+                  можливістю повторного використання для веб-сторінок, зокрема
                   за допомогою змінних, міксінів та вкладених правил. Вивчіть,
-                  як SASS/SCSS може полегшити процес стилізації ваших
-                  веб-проектів.
+                  як SASS/SCSS можуть полегшити процес стилізації ваших
+                  веб-проектів
                 </p>
               </div>
             </div>
           </a>
+          <div class="enables_when_desktop">
+            <a class="link_card_item" href="/articles.html">
+              <div class="card_item">
+                <div class="wrapper_img_author_title">
+                  <div class="card_image">
+                    <img
+                      src="/images/technologies/react.jpg"
+                      alt="Фотографія статті про React" />
+                  </div>
+                  <div class="author">
+                    <p>Автори: Senior розробники компанії "Розум"</p>
+                  </div>
+                  <div class="card_title">
+                    <h3>React: Основні переваги для веб-розробників</h3>
+                  </div>
+                </div>
+                <div class="card_description">
+                  <p>
+                    React — це сучасний інструмент, який дозволяє створювати
+                    відмінно працюючі веб-додатки з динамічними інтерфейсами. За
+                    допомогою React розробники можуть писати чистий,
+                    організований код і швидко реагувати на зміни вимог
+                    веб-проектів. React відкриває двері до нових можливостей у
+                    світі сучасної веб-розробки, де динамічність і швидкість є
+                    ключовими чинниками успіху.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <a href="/articles.html" class="button">Переглянути всі статті</a>
       </div>
     </section>
 
-    <section class="about_us">
+    <section id="about_us_section" class="about_us">
       <div class="container container_pall">
         <div class="text_above">
           <h2>Про нас</h2>
@@ -321,7 +389,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts_section" class="contacts">
       <!-- decorations backgrounds -->
       <img
         id="background_lines_left_side"
@@ -342,7 +410,7 @@
             <div class="email_address">Email: rozumcompany@gmail.com</div>
             <div class="contacts_socials">
               <!-- facebook -->
-              <a href="#">
+              <a href="https://www.facebook.com/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                   <title>Facebook</title>
                   <path
@@ -351,7 +419,7 @@
                 </svg>
               </a>
               <!-- instagram -->
-              <a href="#">
+              <a href="https://www.instagram.com/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
                   <title>Instagram</title>
                   <path
@@ -360,7 +428,7 @@
                 </svg>
               </a>
               <!-- twitter -->
-              <a href="#">
+              <a href="https://twitter.com/home?lang=en" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
                   <title>Twitter</title>
                   <path
@@ -423,13 +491,13 @@
 
     <footer class="footer">
       <div class="container container_px">
-        <a href="#" class="footer_logo">
+        <a href="/main.html" class="footer_logo">
           <img src="/images/science_logo.png" alt="Лого веб-сайту" />
         </a>
 
         <div class="footer_social">
           <!-- facebook -->
-          <a href="#">
+          <a href="https://www.facebook.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <title>Facebook</title>
               <path
@@ -438,7 +506,7 @@
             </svg>
           </a>
           <!-- instagram -->
-          <a href="#">
+          <a href="https://www.instagram.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
               <title>Instagram</title>
               <path
@@ -447,7 +515,7 @@
             </svg>
           </a>
           <!-- twitter -->
-          <a href="#">
+          <a href="https://twitter.com/home?lang=en" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
               <title>Twitter</title>
               <path
@@ -456,7 +524,7 @@
             </svg>
           </a>
           <!-- youtube -->
-          <a href="#">
+          <a href="https://www.youtube.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
               <title>YouTube</title>
               <path
@@ -465,7 +533,7 @@
             </svg>
           </a>
           <!-- pinterest -->
-          <a href="#">
+          <a href="https://www.pinterest.com/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <title>Pinterest</title>
               <path
@@ -476,14 +544,14 @@
         </div>
 
         <div class="footer_links column_first">
-          <a href="#">Головна</a>
-          <a href="#">Курси</a>
-          <a href="#">Блог</a>
+          <a href="/main.html">Головна</a>
+          <a href="/courses.html">Курси</a>
+          <a href="/articles.html">Блог</a>
         </div>
 
         <div class="footer_links column_second">
-          <a href="#">Про нас</a>
-          <a href="#">Контакти</a>
+          <a href="/main.html#about_us_section">Про нас</a>
+          <a href="/main.html#contacts_section">Контакти</a>
         </div>
 
         <div class="footer_copyright">&copy; Розум! Всі права захищені.</div>
