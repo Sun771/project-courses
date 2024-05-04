@@ -1,0 +1,24 @@
+.username_and_btn_logout {
+  .username_and_btn_logout_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .svg_and_username {
+      display: flex;
+      margin-right: 1.5rem;
+
+      svg {
+        width: 30px;
+        height: auto;
+        margin-right: 0.3rem;
+      }
+
+      p {
+        color: $darkBlue;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

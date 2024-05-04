@@ -39,7 +39,7 @@ app.use(methodOverride("_method"));
 
 // Routes
 app.get("/main", checkAuthenticated, (req, res) => {
-  res.render("main.ejs", { name: req.user.name });
+  res.render("main.ejs", { name: req.user.name, checkAuthenticated: true });
 });
 
 app.get("/courses", checkAuthenticated, (req, res) => {

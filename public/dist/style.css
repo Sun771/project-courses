@@ -746,15 +746,13 @@ p {
 .about_us .container .about_us_content .about_us_photos {
   width: 100%;
   border-radius: 1.5625rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 0 4px 12px grey;
 }
 .about_us .container .about_us_content #about_us_photo_first {
   max-width: 36.9375rem;
   max-height: 16.25rem;
-  -o-object-position: 0 10%;
-     object-position: 0 10%;
+  object-position: 0 10%;
   margin-bottom: 1.5rem;
 }
 @media (min-width: 40em) {
@@ -791,8 +789,7 @@ p {
 .about_us .container .about_us_content #about_us_photo_second {
   max-width: 24.5rem;
   max-height: 16.25rem;
-  -o-object-position: 0 20%;
-     object-position: 0 20%;
+  object-position: 0 20%;
 }
 @media (min-width: 64em) {
   .about_us .container .about_us_content #about_us_photo_second {
@@ -928,9 +925,6 @@ p {
 .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input:not(:last-child) {
   margin-bottom: 1rem;
 }
-.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input::-moz-placeholder {
-  opacity: 60%;
-}
 .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs input::placeholder {
   opacity: 60%;
 }
@@ -963,9 +957,6 @@ p {
   border-radius: 0.625rem;
   outline: none;
   transition: inherit;
-}
-.contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea::-moz-placeholder {
-  opacity: 60%;
 }
 .contacts .container .contacts_content .contact_us_form_container form .contact_us_section_container_inputs textarea::placeholder {
   opacity: 60%;
@@ -1315,9 +1306,6 @@ p {
 .global_container_login .login .container .outer_container_background .login_content_container form .login_inputs input:not(:last-child) {
   margin-bottom: 1rem;
 }
-.global_container_login .login .container .outer_container_background .login_content_container form .login_inputs input::-moz-placeholder {
-  opacity: 60%;
-}
 .global_container_login .login .container .outer_container_background .login_content_container form .login_inputs input::placeholder {
   opacity: 60%;
 }
@@ -1444,9 +1432,6 @@ p {
 .global_container_register .register .container .outer_container_background .register_content_container form .register_inputs input:not(:last-child) {
   margin-bottom: 1rem;
 }
-.global_container_register .register .container .outer_container_background .register_content_container form .register_inputs input::-moz-placeholder {
-  opacity: 60%;
-}
 .global_container_register .register .container .outer_container_background .register_content_container form .register_inputs input::placeholder {
   opacity: 60%;
 }
@@ -1497,4 +1482,24 @@ p {
     left: 0;
     right: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+.username_and_btn_logout .username_and_btn_logout_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.username_and_btn_logout .username_and_btn_logout_content .svg_and_username {
+  display: flex;
+  margin-right: 1.5rem;
+}
+.username_and_btn_logout .username_and_btn_logout_content .svg_and_username svg {
+  width: 30px;
+  height: auto;
+  margin-right: 0.3rem;
+}
+.username_and_btn_logout .username_and_btn_logout_content .svg_and_username p {
+  color: hsl(233, 26%, 24%);
+  font-weight: 500;
+  margin-bottom: 0;
+}
