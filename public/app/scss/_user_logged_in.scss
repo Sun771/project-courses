@@ -1,5 +1,6 @@
-.username_and_btn_logout {
-  .username_and_btn_logout_content {
+// Displaying username near mobile's/tablet's menu toggle, or near desktop's header's button 'Log out'
+.username_and_element {
+  .username_and_element_content {
     display: flex;
     flex-direction: row;
     align-items: center;

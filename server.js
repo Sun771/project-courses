@@ -38,16 +38,34 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 
 // Routes
-app.get("/main", checkAuthenticated, (req, res) => {
-  res.render("main.ejs", { name: req.user.name, checkAuthenticated: true });
+app.get("/main", (req, res) => {
+  // Check if req.user.name is defined
+  const name = req.user && req.user.name ? req.user.name : undefined;
+  const authenticationState = req.isAuthenticated();
+  res.render("main.ejs", {
+    name: name,
+    authenticationState: authenticationState,
+  });
 });
 
-app.get("/courses", checkAuthenticated, (req, res) => {
-  res.render("courses.ejs", { name: req.user.name });
+app.get("/courses", (req, res) => {
+  // Check if req.user.name is defined
+  const name = req.user && req.user.name ? req.user.name : undefined;
+  const authenticationState = req.isAuthenticated();
+  res.render("courses.ejs", {
+    name: name,
+    authenticationState: authenticationState,
+  });
 });
 
-app.get("/articles", checkAuthenticated, (req, res) => {
-  res.render("articles.ejs", { name: req.user.name });
+app.get("/articles", (req, res) => {
+  // Check if req.user.name is defined
+  const name = req.user && req.user.name ? req.user.name : undefined;
+  const authenticationState = req.isAuthenticated();
+  res.render("articles.ejs", {
+    name: name,
+    authenticationState: authenticationState,
+  });
 });
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
@@ -95,13 +113,13 @@ app.delete("/logout", (req, res, next) => {
   });
 });
 
-function checkAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
+// function checkAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     return next();
+//   }
 
-  res.redirect("/login");
-}
+//   res.redirect("/login");
+// }
 
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {

@@ -1484,21 +1484,21 @@ p {
   }
 }
 
-.username_and_btn_logout .username_and_btn_logout_content {
+.username_and_element .username_and_element_content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.username_and_btn_logout .username_and_btn_logout_content .svg_and_username {
+.username_and_element .username_and_element_content .svg_and_username {
   display: flex;
   margin-right: 1.5rem;
 }
-.username_and_btn_logout .username_and_btn_logout_content .svg_and_username svg {
+.username_and_element .username_and_element_content .svg_and_username svg {
   width: 30px;
   height: auto;
   margin-right: 0.3rem;
 }
-.username_and_btn_logout .username_and_btn_logout_content .svg_and_username p {
+.username_and_element .username_and_element_content .svg_and_username p {
   color: hsl(233, 26%, 24%);
   font-weight: 500;
   margin-bottom: 0;
