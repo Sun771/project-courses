@@ -73,12 +73,15 @@
                 </div>
               </div>
 
+              <% if (duplicateEmailFlag) { %>
+                 <p style="margin-bottom: 0.5rem;">Вказана електрона пошта вже зайнята</p>
+              <% } %>
               <form action="/register" method="POST">
                 <div class="register_inputs">
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="username"
                     placeholder="Ім'я"
                     required />
                   <input
