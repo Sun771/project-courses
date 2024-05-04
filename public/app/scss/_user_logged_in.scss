@@ -1,0 +1,25 @@
+// Displaying username near mobile's/tablet's menu toggle, or near desktop's header's button 'Log out'
+.username_and_element {
+  .username_and_element_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .svg_and_username {
+      display: flex;
+      margin-right: 1.5rem;
+
+      svg {
+        width: 30px;
+        height: auto;
+        margin-right: 0.3rem;
+      }
+
+      p {
+        color: $darkBlue;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
