@@ -19,6 +19,9 @@ initializePassport(
 
 const users = [];
 
+// using css files
+app.use(express.static("public"));
+
 // Telling server that ejs is used
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
@@ -35,8 +38,16 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 
 // Routes
-app.get("/", checkAuthenticated, (req, res) => {
-  res.render("index.ejs", { name: req.user.name });
+app.get("/main", checkAuthenticated, (req, res) => {
+  res.render("main.ejs", { name: req.user.name });
+});
+
+app.get("/courses", checkAuthenticated, (req, res) => {
+  res.render("courses.ejs", { name: req.user.name });
+});
+
+app.get("/articles", checkAuthenticated, (req, res) => {
+  res.render("articles.ejs", { name: req.user.name });
 });
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
@@ -47,7 +58,7 @@ app.post(
   "/login",
   checkNotAuthenticated,
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/main",
     failureRedirect: "/login",
     failureFlash: true,
   })
@@ -72,6 +83,7 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
   }
   console.log(users);
 });
+// /Routes
 
 // log out functionality
 app.delete("/logout", (req, res, next) => {
@@ -93,7 +105,7 @@ function checkAuthenticated(req, res, next) {
 
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
-    return res.redirect("/");
+    return res.redirect("/main");
   }
 
   next();

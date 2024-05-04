@@ -19,7 +19,7 @@
     <header class="header">
       <div class="overlay contains-fade"></div>
       <nav class="container container_pall flex flex-jc-sb flex-ai-c">
-        <a href="/main.html" class="header_logo">
+        <a href="/main" class="header_logo">
           <img src="/images/science_logo.png" alt="Лого веб-сайту" />
           <h1>Розум!</h1>
         </a>
@@ -33,28 +33,29 @@
 
         <!-- desktop navigation menu -->
         <div class="header_links hide_for_mobile">
-          <a href="/main.html">Головна</a>
-          <a href="/courses.html">Курси</a>
-          <a href="/articles.html">Блог</a>
-          <a href="/main.html#about_us_section">Про нас</a>
-          <a href="/main.html#contacts_section">Контакти</a>
+          <a href="/main">Головна</a>
+          <a href="/courses">Курси</a>
+          <a href="/articles">Блог</a>
+          <a href="/main#about_us_section">Про нас</a>
+          <a href="/main#contacts_section">Контакти</a>
         </div>
 
-        <a href="/login.html" class="button header_cta hide_for_mobile">
+        <!-- <a href="/login" class="button header_cta hide_for_mobile">
           Ввійти
-        </a>
+        </a> -->
+        <h1>Привіт <%= name %></h1>
       </nav>
 
       <!-- mobile/tablet header menu -->
       <div class="header_menu contains-fade">
-        <a href="/login.html" onclick="closeOverlay()">Ввійти</a>
-        <a href="/main.html" onclick="closeOverlay()">Головна</a>
-        <a href="/courses.html" onclick="closeOverlay()">Курси</a>
-        <a href="/articles.html" onclick="closeOverlay()">Блог</a>
-        <a href="/main.html#about_us_section" onclick="closeOverlay()">
+        <a href="/login" onclick="closeOverlay()">Ввійти</a>
+        <a href="/main" onclick="closeOverlay()">Головна</a>
+        <a href="/courses" onclick="closeOverlay()">Курси</a>
+        <a href="/articles" onclick="closeOverlay()">Блог</a>
+        <a href="/main#about_us_section" onclick="closeOverlay()">
           Про нас
         </a>
-        <a href="/main.html#contacts_section" onclick="closeOverlay()">
+        <a href="/main#contacts_section" onclick="closeOverlay()">
           Контакти
         </a>
       </div>
@@ -95,7 +96,7 @@
           </p>
         </div>
         <div class="cards_flexbox">
-          <a class="link_card_item" href="/courses.html">
+          <a class="link_card_item" href="/courses">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -119,7 +120,7 @@
               </div>
             </div>
           </a>
-          <a class="link_card_item" href="/courses.html">
+          <a class="link_card_item" href="/courses">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -143,7 +144,7 @@
               </div>
             </div>
           </a>
-          <a class="link_card_item" href="/courses.html">
+          <a class="link_card_item" href="/courses">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -168,7 +169,7 @@
             </div>
           </a>
           <div class="enables_when_desktop">
-            <a class="link_card_item" href="/courses.html">
+            <a class="link_card_item" href="/courses">
               <div class="card_item">
                 <div class="wrapper_img_author_title">
                   <div class="card_image">
@@ -199,7 +200,7 @@
             </a>
           </div>
         </div>
-        <a href="/courses.html" class="button">Переглянути всі курси</a>
+        <a href="/courses" class="button">Переглянути всі курси</a>
       </div>
     </section>
 
@@ -223,7 +224,7 @@
           </p>
         </div>
         <div class="cards_flexbox">
-          <a class="link_card_item" href="/articles.html">
+          <a class="link_card_item" href="/articles">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -248,7 +249,7 @@
               </div>
             </div>
           </a>
-          <a class="link_card_item" href="/articles.html">
+          <a class="link_card_item" href="/articles">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -274,7 +275,7 @@
               </div>
             </div>
           </a>
-          <a class="link_card_item" href="/articles.html">
+          <a class="link_card_item" href="/articles">
             <div class="card_item">
               <div class="wrapper_img_author_title">
                 <div class="card_image">
@@ -301,7 +302,7 @@
             </div>
           </a>
           <div class="enables_when_desktop">
-            <a class="link_card_item" href="/articles.html">
+            <a class="link_card_item" href="/articles">
               <div class="card_item">
                 <div class="wrapper_img_author_title">
                   <div class="card_image">
@@ -331,7 +332,7 @@
             </a>
           </div>
         </div>
-        <a href="/articles.html" class="button">Переглянути всі статті</a>
+        <a href="/articles" class="button">Переглянути всі статті</a>
       </div>
     </section>
 
@@ -491,7 +492,7 @@
 
     <footer class="footer">
       <div class="container container_px">
-        <a href="/main.html" class="footer_logo">
+        <a href="/main" class="footer_logo">
           <img src="/images/science_logo.png" alt="Лого веб-сайту" />
         </a>
 
@@ -544,14 +545,14 @@
         </div>
 
         <div class="footer_links column_first">
-          <a href="/main.html">Головна</a>
-          <a href="/courses.html">Курси</a>
-          <a href="/articles.html">Блог</a>
+          <a href="/main">Головна</a>
+          <a href="/courses">Курси</a>
+          <a href="/articles">Блог</a>
         </div>
 
         <div class="footer_links column_second">
-          <a href="/main.html#about_us_section">Про нас</a>
-          <a href="/main.html#contacts_section">Контакти</a>
+          <a href="/main#about_us_section">Про нас</a>
+          <a href="/main#contacts_section">Контакти</a>
         </div>
 
         <div class="footer_copyright">&copy; Розум! Всі права захищені.</div>
