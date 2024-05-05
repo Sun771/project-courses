@@ -1495,6 +1495,7 @@ p {
 }
 .username_and_element .username_and_element_content .svg_and_username {
   display: flex;
+  align-items: center;
   margin-right: 1.5rem;
 }
 .username_and_element .username_and_element_content .svg_and_username svg {
