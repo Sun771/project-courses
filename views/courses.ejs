@@ -50,12 +50,6 @@
           </a>
         <% } %>
 
-        <!-- <a id="btnMenu" href="#" class="header_toggle hide_for_desktop">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a> -->
-
         <!-- desktop navigation menu -->
         <div class="header_links hide_for_mobile">
           <a href="/main">Головна</a>
@@ -92,14 +86,12 @@
 
          <% if (authenticationState) { %>
           <form action="/logout?_method=DELETE" method="POST">
-            <!-- <button type="submit" class="button" onclick="closeOverlay()">Вийти</button> -->
             <a href='#' onclick="this.closest('form').submit(); closeOverlay(); return false;">Вийти</a>
           </form>
         <% } else { %>
           <a href="/login" onclick="closeOverlay()">Ввійти</a>
         <% } %>
 
-        <!-- <a href="/login" onclick="closeOverlay()">Ввійти</a> -->
         <a href="/main" onclick="closeOverlay()">Головна</a>
         <a href="/courses" onclick="closeOverlay()">Курси</a>
         <a href="/articles" onclick="closeOverlay()">Блог</a>

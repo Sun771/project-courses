@@ -14,12 +14,6 @@ const methodOverride = require("method-override");
 const initializePassport = require("./passport-config");
 let duplicateEmailFlag = false;
 
-// initializePassport(
-//   passport,
-//   (email) => users.find((user) => user.email === email),
-//   (id) => users.find((user) => user.id === id)
-// );
-
 initializePassport(
   passport,
   async (email) => {
@@ -42,9 +36,6 @@ initializePassport(
   }
 );
 
-// const users = [];
-
-// using css files
 app.use(express.static("public"));
 
 // Telling server that ejs is used
@@ -70,7 +61,6 @@ function setDuplicateEmailFlag(req, res, next) {
 
 // Routes
 app.get("/main", (req, res) => {
-  // Check if req.user.username is defined
   const username =
     req.user && req.user.Username ? req.user.Username : undefined;
   const authenticationState = req.isAuthenticated();
@@ -91,7 +81,6 @@ app.get("/main", (req, res) => {
 });
 
 app.get("/courses", (req, res) => {
-  // Check if req.user.username is defined
   const username =
     req.user && req.user.Username ? req.user.Username : undefined;
   const authenticationState = req.isAuthenticated();
@@ -131,21 +120,6 @@ app.get("/register", checkNotAuthenticated, (req, res) => {
 });
 
 app.post("/register", checkNotAuthenticated, async (req, res) => {
-  // try {
-  //   duplicateEmailFlag = false;
-  //   const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  //   users.push({
-  //     id: Date.now().toString(),
-  //     username: req.body.username,
-  //     email: req.body.email,
-  //     password: hashedPassword,
-  //   });
-  //   res.redirect("/login");
-  // } catch {
-  //   res.redirect("/register");
-  // }
-  // console.log(users);
-
   try {
     duplicateEmailFlag = false;
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -193,7 +167,6 @@ app.delete("/logout", (req, res, next) => {
     if (err) {
       return next(err);
     }
-    // res.redirect("/main");
 
     // Determine the redirect URL based on the Referer header
     const redirectUrl = req.headers.referer || "/main"; // Default to "/main" if Referer header is not present
@@ -201,11 +174,6 @@ app.delete("/logout", (req, res, next) => {
     // Redirect the user back to the original page or "/main" if Referer header is not available
     res.redirect(redirectUrl);
   });
-
-  // req.logout(req.user, (err) => {
-  //   if (err) return next(err);
-  //   // res.redirect("/");
-  // });
 });
 
 // function checkAuthenticated(req, res, next) {
