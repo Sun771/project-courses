@@ -60,7 +60,7 @@ function setDuplicateEmailFlag(req, res, next) {
 }
 
 // Routes
-app.get("/main", (req, res) => {
+app.get("/", (req, res) => {
   const username =
     req.user && req.user.Username ? req.user.Username : undefined;
   const authenticationState = req.isAuthenticated();
@@ -109,7 +109,7 @@ app.post(
   checkNotAuthenticated,
   setDuplicateEmailFlag,
   passport.authenticate("local", {
-    successRedirect: "/main",
+    successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true,
   })
@@ -169,9 +169,9 @@ app.delete("/logout", (req, res, next) => {
     }
 
     // Determine the redirect URL based on the Referer header
-    const redirectUrl = req.headers.referer || "/main"; // Default to "/main" if Referer header is not present
+    const redirectUrl = req.headers.referer || "/"; // Default to "/" if Referer header is not present
 
-    // Redirect the user back to the original page or "/main" if Referer header is not available
+    // Redirect the user back to the original page or "/" if Referer header is not available
     res.redirect(redirectUrl);
   });
 });
@@ -186,7 +186,7 @@ app.delete("/logout", (req, res, next) => {
 
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
-    return res.redirect("/main");
+    return res.redirect("/");
   }
 
   next();
