@@ -33,7 +33,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                 </svg>
-                <p><%= name %></p>
+                <p><%= username %></p>
               </div>
               <a id="btnMenu" href="#" class="header_toggle">
                 <span></span>
@@ -49,12 +49,6 @@
           <span></span>
           </a>
         <% } %>
-
-        <!-- <a id="btnMenu" href="#" class="header_toggle hide_for_desktop">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a> -->
 
         <!-- desktop navigation menu -->
         <div class="header_links hide_for_mobile">
@@ -72,7 +66,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
-              <p><%= name %></p>
+              <p><%= username %></p>
               </div>
               <form action="/logout?_method=DELETE" method="POST">
                 <button type="submit" class="button">Вийти</button>
@@ -92,14 +86,12 @@
 
          <% if (authenticationState) { %>
           <form action="/logout?_method=DELETE" method="POST">
-            <!-- <button type="submit" class="button" onclick="closeOverlay()">Вийти</button> -->
             <a href='#' onclick="this.closest('form').submit(); closeOverlay(); return false;">Вийти</a>
           </form>
         <% } else { %>
           <a href="/login" onclick="closeOverlay()">Ввійти</a>
         <% } %>
 
-        <!-- <a href="/login" onclick="closeOverlay()">Ввійти</a> -->
         <a href="/main" onclick="closeOverlay()">Головна</a>
         <a href="/courses" onclick="closeOverlay()">Курси</a>
         <a href="/articles" onclick="closeOverlay()">Блог</a>

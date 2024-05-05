@@ -319,6 +319,10 @@ button:hover,
   }
 }
 
+.style_paragraph_ejs {
+  margin-bottom: 0.5rem;
+}
+
 .header.open .header_toggle > span:first-child {
   transform: rotate(45deg);
 }
