@@ -76,7 +76,6 @@ app.get("/", (req, res) => {
   res.render("main.ejs", {
     username: username,
     authenticationState: authenticationState,
-    duplicateEmailFlag: duplicateEmailFlag,
   });
 });
 

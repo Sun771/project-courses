@@ -1,4 +1,3 @@
-// Database connection
 const { Sequelize, DataTypes } = require("sequelize");
 
 // Create a Sequelize instance with database credentials
@@ -36,7 +35,7 @@ const User = sequelize.define(
     Password: Sequelize.STRING(255),
   },
   {
-    tableName: "userstable", // Explicitly defining the table name without pluralization
+    tableName: "userstable", // Explicitly defining the table name
     timestamps: false, // Disable timestamps
   }
 );
@@ -54,8 +53,8 @@ sequelize
     console.error("Unable to sync models:", err);
   });
 
-console.log("database.js: User model exported:", User);
 module.exports = { sequelize, User };
+console.log("database.js: User model exported:", User);
 
 // Check if database is connected correctly, and the website can access the database
 // User.describe().then((attributes) => {
